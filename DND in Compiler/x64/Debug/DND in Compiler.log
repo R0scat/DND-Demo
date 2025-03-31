@@ -1,2 +1,13 @@
-﻿  DND in Compiler.cpp
-  DND in Compiler.vcxproj -> C:\Users\maiar\Documents\An1\Semestrul 2\POO\DND in Compiler\x64\Debug\DND in Compiler.exe
+﻿  Atribute.cpp
+  Class.cpp
+  DND in Compiler.cpp
+  DndHelper.cpp
+  Entity.cpp
+  Equipment.cpp
+  PlayerCharacter.cpp
+  Generating Code...
+DndHelper.obj : error LNK2005: "class Class __cdecl dndHelper::pickClass(int)" (?pickClass@dndHelper@@YA?AVClass@@H@Z) already defined in DND in Compiler.obj
+DndHelper.obj : error LNK2005: "class Race __cdecl dndHelper::pickRace(int)" (?pickRace@dndHelper@@YA?AVRace@@H@Z) already defined in DND in Compiler.obj
+DndHelper.obj : error LNK2005: "void __cdecl dndHelper::pickRaceMessage(void)" (?pickRaceMessage@dndHelper@@YAXXZ) already defined in DND in Compiler.obj
+DndHelper.obj : error LNK2005: "void __cdecl dndHelper::startMessage(void)" (?startMessage@dndHelper@@YAXXZ) already defined in DND in Compiler.obj
+C:\Users\maiar\Documents\An1\Semestrul 2\POO\DND in Compiler\x64\Debug\DND in Compiler.exe : fatal error LNK1169: one or more multiply defined symbols found

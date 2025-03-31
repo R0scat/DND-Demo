@@ -145,6 +145,72 @@ namespace dndHelper {
         return chosenClass;
     }
 
+    Race pickRace(int option) // returneaza race-ul corect ales de utilizator
+    {
+
+		Race chosenRace;
+        switch (option)
+        {
+
+        case 1: // human 
+        {
+            chosenRace.setName("Human");
+            chosenRace.setDescription("");
+            break;
+        }
+        case 2: // elf
+        {
+            chosenRace.setName("Elf");
+            chosenRace.setDescription("");
+            break;
+        }
+        case 3: // dwarf
+        {
+            chosenRace.setName("Dwarf");
+            chosenRace.setDescription("");
+            break;
+        }
+        case 4: // halfling
+        {
+            chosenRace.setName("Halfling");
+            chosenRace.setDescription("");
+            break;
+        }
+        case 5: // gnome
+        {
+            chosenRace.setName("Gnome");
+            chosenRace.setDescription("");
+            break;
+        }
+        case 6: // half-elf
+        {
+            chosenRace.setName("Half-Elf");
+            chosenRace.setDescription("");
+            break;
+        }
+        case 7: // half-orc
+        {
+            chosenRace.setName("Half-Orc");
+            chosenRace.setDescription("");
+            break;
+        }
+        case 8: // tiefling
+        {
+            chosenRace.setName("Tiefling");
+            chosenRace.setDescription("");
+            break;
+        }
+        default: // cand nu introduce o valoare existenta
+        {
+            std::cout << "Option not available, try again?\n";
+			std::cin >> option;
+			dndHelper::pickRace(option);
+        }
+
+        }
+        return chosenRace;
+    }
+
 }
 
 

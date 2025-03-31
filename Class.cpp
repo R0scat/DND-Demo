@@ -80,5 +80,5 @@ void Class::showClassDetails()
 	std::cout << "Class: " << this->name << std::endl;
 	std::cout << "Hit Dice: " << this->hitDice << std::endl;
 	std::cout << "Description: " << this->description << std::endl;
-	std::cout << "Level: " << this->level << std::endl;
+	std::cout << "Level: " << this->level << std::endl << std::endl;
 }
