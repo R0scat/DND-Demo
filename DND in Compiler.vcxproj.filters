@@ -33,9 +33,6 @@
     <ClCompile Include="Class.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="DndHelper.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
     <ClCompile Include="Race.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>

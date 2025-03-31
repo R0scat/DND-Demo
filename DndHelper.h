@@ -7,9 +7,8 @@
 #include "Race.h"
 
 namespace dndHelper {
-    void startMessage() { // mesajul dat la inceput de tot 
+    void pickClassMessage() { // mesajul dat la inceput de tot 
 
-        std::cout << "Welcome to the DND character Creator! Let's start by picking your class, race and level!\n";
         std::cout << "Pick your class:\n";
         std::cout << "1.  Paladin\n";
         std::cout << "2.  Wizard\n";
@@ -209,6 +208,21 @@ namespace dndHelper {
 
         }
         return chosenRace;
+    }
+
+    void pickPlayerCharacter() // just chooses and creates the PC, IF YOU WANT TO DISPLAY ATRIBUTES USE THE CLASS FUNCTION!!!
+    {
+        int option;
+        Class chosenClass;
+        Race chosenRace;
+
+        dndHelper::pickClassMessage();
+        std::cin >> option;
+        chosenClass = dndHelper::pickClass(option);
+
+        dndHelper::pickRaceMessage();
+        std::cin >> option;
+        chosenRace = dndHelper::pickRace(option);
     }
 
 }

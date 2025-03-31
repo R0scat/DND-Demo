@@ -12,7 +12,7 @@
 class PlayerCharacter : public Entity {
 	std::string playerName;
 	std::string characterName;
-	Class characterClass[12]; // can multiclass up to ten classes max (ca doar atatea sunt ca idee)
+	Class characterClass[12];				// can multiclass up to ten classes max (ca doar atatea sunt ca idee)
 	Race characterRace;
 	int nrClasses;
 	int level;
@@ -30,12 +30,11 @@ public:
 	// settere
 	void setPlayerName();
 	void setCharacterName();
-	void addCharacterClass(); // se va folosi de nrClasses pt a adauga o clasa
+	void addCharacterClass();				// se va folosi de nrClasses pt a adauga o clasa
 	void setCharacterRace();
 	// OBS: nu poti modifica variabila de nrClasses, aceasta se modifica simultan cu clasele
-	void showPlayerCharacterDetails(); // afisare tot
-	void modifyClass(int classPos); // modifica clasa aflata pe pozitia classPos
-
+	void showPlayerCharacterDetails();		// afisare tot
+	void modifyClass(int classPos);			// modifica clasa aflata pe pozitia classPos
 };
 
 #endif

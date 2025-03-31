@@ -44,13 +44,13 @@
 //		dndHelper::pickClass(option);
 //	}
 //}
-
-#include "DndHelper.h"
-
-
-// WRAPPER !!!!!
-void whatever()
-{
-	dndHelper::startMessage();
-
-}
+//
+//#include "DndHelper.h"
+//
+//
+//// WRAPPER !!!!!
+//void whatever()
+//{
+//	dndHelper::startMessage();
+//
+//}

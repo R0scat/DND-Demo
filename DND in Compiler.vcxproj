@@ -130,7 +130,6 @@
     <ClCompile Include="Atribute.cpp" />
     <ClCompile Include="Class.cpp" />
     <ClCompile Include="DND in Compiler.cpp" />
-    <ClCompile Include="DndHelper.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="PlayerCharacter.cpp" />
