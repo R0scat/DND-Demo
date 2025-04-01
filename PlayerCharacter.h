@@ -1,7 +1,7 @@
-#ifndef PLAYERCHARACTER_H
-#define PLAYERCHACTER_H
-
 #pragma once
+#ifndef PLAYERCHARACTER_H
+#define PLAYERCHARACTER_H
+
 #include <string>
 #include "Entity.h"
 #include "Class.h"
@@ -25,16 +25,17 @@ public:
 	// gettere
 	std::string getPlayerName();
 	std::string getCharacterName();
-	Class getCharacterClasses();
-	Race getCharacterRaces();
+	Class getSpecificCharacterClass(int pos);
+	Race getCharacterRace();
+	void showAllCharacterClasses();
 	// settere
-	void setPlayerName();
-	void setCharacterName();
-	void addCharacterClass();				// se va folosi de nrClasses pt a adauga o clasa
-	void setCharacterRace();
+	void setPlayerName(std::string name);
+	void setCharacterName(std::string name);
+	void addCharacterClass(Class toBeAdded);// se va folosi de nrClasses pt a adauga o clasa
+	void setCharacterRace(Race toSet);
 	// OBS: nu poti modifica variabila de nrClasses, aceasta se modifica simultan cu clasele
 	void showPlayerCharacterDetails();		// afisare tot
-	void modifyClass(int classPos);			// modifica clasa aflata pe pozitia classPos
+	void modifyClass(PlayerCharacter givenCharacter, int classPos, std::string name = "default", std::string hitDice = "default", std::string description = "default", int level = 1);			// modifica clasa aflata pe pozitia classPos
 };
 
 #endif

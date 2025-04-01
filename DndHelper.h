@@ -7,7 +7,7 @@
 #include "Race.h"
 
 namespace dndHelper {
-    void pickClassMessage() { // mesajul dat la inceput de tot 
+    inline void pickClassMessage() { // mesajul dat la inceput de tot 
 
         std::cout << "Pick your class:\n";
         std::cout << "1.  Paladin\n";
@@ -24,7 +24,7 @@ namespace dndHelper {
         std::cout << "12. Bard\n";
     }
 
-    void pickRaceMessage() { // mesaj dat pt afisare alegere neam/ rasa
+    inline void pickRaceMessage() { // mesaj dat pt afisare alegere neam/ rasa
 
         std::cout << "Great! Now chose your race :P\n";
         std::cout << "1. Human\n";
@@ -37,7 +37,7 @@ namespace dndHelper {
 		std::cout << "8. Tiefling\n";
     }
 
-    Class pickClass(int option) {// big switch case for every available class lol - de la 1 la 12
+    inline Class pickClass(int option) {// big switch case for every available class lol - de la 1 la 12
 
         int lvl;
 		Class chosenClass;
@@ -144,7 +144,7 @@ namespace dndHelper {
         return chosenClass;
     }
 
-    Race pickRace(int option) // returneaza race-ul corect ales de utilizator
+    inline Race pickRace(int option) // returneaza race-ul corect ales de utilizator
     {
 
 		Race chosenRace;
@@ -210,7 +210,7 @@ namespace dndHelper {
         return chosenRace;
     }
 
-    void pickPlayerCharacter() // just chooses and creates the PC, IF YOU WANT TO DISPLAY ATRIBUTES USE THE CLASS FUNCTION!!!
+    inline void pickPlayerCharacter() // just chooses and creates the PC, IF YOU WANT TO DISPLAY ATRIBUTES USE THE CLASS FUNCTION!!!
     {
         int option;
         Class chosenClass;

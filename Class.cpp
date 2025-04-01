@@ -82,3 +82,9 @@ void Class::showClassDetails()
 	std::cout << "Description: " << this->description << std::endl;
 	std::cout << "Level: " << this->level << std::endl << std::endl;
 }
+
+std::ostream& operator << (std::ostream& cout, const Class& obj)
+{
+	cout << "Class(" << obj.name << ", " << obj.hitDice << ", " << obj.level << ", " << obj.description << ")";
+	return cout;
+}
