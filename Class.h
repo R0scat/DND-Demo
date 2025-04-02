@@ -11,7 +11,7 @@ class Class {
 	int classLevel;
 public:
 	Class();															     // constructor simplu clasa
-	Class(std::string name, std::string hitDice, std::string description);   // constructor parametrii
+	Class(std::string name, std::string hitDice, std::string description, int classLevel);   // constructor parametrii
 	Class(const Class& obj);											     // constructor copiere
 	~Class();															     // destructor
 	std::string getName();												     // getter nume -> returneaza numele

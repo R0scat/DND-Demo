@@ -142,12 +142,6 @@ namespace dndHelper {
         std::cin >> lvl;
         chosenClass.setLevel(lvl);
 
-        // DEBUG !!!!
-        std::cout << "\n";
-        std::cout << chosenClass;
-        std::cout << "\n";
-        // DEBUG !!!
-
         return chosenClass;
     }
 
@@ -232,6 +226,16 @@ namespace dndHelper {
         chosenRace = dndHelper::pickRace(option);
     }
 
+    inline void menu()
+    {
+        std::cout << "Your character basics have all been set up, what would you like to do?";
+        std::cout << "1. add another class";
+        std::cout << "2. add equipment";
+        std::cout << "3. add backstory";
+        std::cout << "4. pick abilities (available at current level)";
+        std::cout << "5. level up";
+        std::cout << "6. quit (deleting the character...)";
+    }
 }
 
 

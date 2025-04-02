@@ -49,6 +49,6 @@ void Race::showRaceDetails()
 
 std::ostream& operator << (std::ostream& cout, const Race& obj)
 {
-	cout << "(name: " << obj.name << ", description: " << obj.description << ")";
+	cout << "	Name: " << obj.name << "\n	description: " << obj.description;
 	return cout;
 }

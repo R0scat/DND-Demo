@@ -22,10 +22,7 @@ PlayerCharacter::PlayerCharacter(std::string playerName, std::string characterNa
 	this->characterClass[0] = firstChosenClass;
 	this->nrClasses = 1;
 	this->characterRace = characterRace;
-	/*this->level = firstChosenClass.getLevel(); */
-	// OBS:: level-ul se seteaza DOAR cu functia setLevel
-	// de ce? pt ca imi dadea bug super weird for some reason!!! idk why!!!
-	// probabil AMBIGUITATE!?!?!?!?!?!?!?!
+	this->level = firstChosenClass.getLevel(); 
 }
 
 PlayerCharacter::PlayerCharacter(const PlayerCharacter& obj)
@@ -115,7 +112,9 @@ void PlayerCharacter::showPlayerCharacterDetails()
 	std::cout << "Player Name: " << this->playerName << "\n";
 	std::cout << "Character Name: " << this->characterName << "\n";
 	std::cout << "Level: " << this->level << "\n";
-	std::cout << "Race: " << this->characterRace << "\n";
+	std::cout << "Race details:\n" << this->characterRace << "\n";
+	std::cout << "Number of Classes: " << this->nrClasses << "\n";
+	std::cout << "Class Details:\n";
 	for (int i = 0; i < this->nrClasses; i++)
 	{
 		characterClass[i].showClassDetails();

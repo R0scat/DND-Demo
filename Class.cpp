@@ -4,16 +4,19 @@
 
 Class::Class()
 {
+	// doar placeholders
 	this->name = "None";
 	this->hitDice = "None";
 	this->description = "None";
+	this->classLevel = 0;
 }
 
-Class::Class(std::string name, std::string hitDice, std::string description)
+Class::Class(std::string name, std::string hitDice, std::string description, int classLevel)
 {
 	this->name = name;
 	this->hitDice = hitDice;
 	this->description = description;
+	this->classLevel = classLevel;
 }
 
 Class::Class(const Class& obj)
@@ -21,6 +24,7 @@ Class::Class(const Class& obj)
 	this->name = obj.name;
 	this->hitDice = obj.hitDice;
 	this->description = obj.description;
+	this->classLevel = obj.classLevel;
 }
 
 Class::~Class() {}
@@ -78,10 +82,10 @@ void Class::setLevel(int level)
 
 void Class::showClassDetails()
 {
-	std::cout << "Class: " << this->name << std::endl;
-	std::cout << "Hit Dice: " << this->hitDice << std::endl;
-	std::cout << "Description: " << this->description << std::endl;
-	std::cout << "Level: " << this->classLevel << std::endl << std::endl;
+	std::cout << "	Class: " << this->name << std::endl;
+	std::cout << "	Hit Dice: " << this->hitDice << std::endl;
+	std::cout << "	Description: " << this->description << std::endl;
+	std::cout << "	Level: " << this->classLevel << std::endl << std::endl;
 }
 
 std::ostream& operator << (std::ostream& cout, const Class& obj)
