@@ -13,7 +13,7 @@ public:
 	void getHealth();			 // getter pt HP
 	void setHealth(int health);  // setter pt HP
 
-private:
+protected:
 	int healthPoints;
 };
 

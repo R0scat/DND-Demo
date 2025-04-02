@@ -43,7 +43,7 @@ std::string Class::getDescription()
 
 int Class::getLevel()
 {
-	return this->level;
+	return this->classLevel;
 }
 
 void Class::setName(std::string name)
@@ -65,13 +65,14 @@ void Class::setLevel(int level)
 {
 	if (level >= 1 && level <= 20)
 	{
-		this->level = level;
+		this->classLevel = level;
 	}
 	else
 	{
+		int newLvl;
 		std::cout << "Invalid level, please enter a number between 1 and 20\n";
-		std::cin >> level;
-		this->setLevel(level);
+		std::cin >> newLvl;
+		this->setLevel(newLvl);
 	}
 }
 
@@ -80,11 +81,11 @@ void Class::showClassDetails()
 	std::cout << "Class: " << this->name << std::endl;
 	std::cout << "Hit Dice: " << this->hitDice << std::endl;
 	std::cout << "Description: " << this->description << std::endl;
-	std::cout << "Level: " << this->level << std::endl << std::endl;
+	std::cout << "Level: " << this->classLevel << std::endl << std::endl;
 }
 
 std::ostream& operator << (std::ostream& cout, const Class& obj)
 {
-	cout << "Class(" << obj.name << ", " << obj.hitDice << ", " << obj.level << ", " << obj.description << ")";
+	cout << "(name: " << obj.name << ", hit dice: " << obj.hitDice << ", level: " << obj.classLevel << ", description: " << obj.description << ")";
 	return cout;
 }

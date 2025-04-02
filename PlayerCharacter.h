@@ -31,11 +31,14 @@ public:
 	// settere
 	void setPlayerName(std::string name);
 	void setCharacterName(std::string name);
-	void addCharacterClass(Class toBeAdded);// se va folosi de nrClasses pt a adauga o clasa
+	void addCharacterClass(Class toBeAdded);		// se va folosi de nrClasses pt a adauga o clasa
 	void setCharacterRace(Race toSet);
+	void setLevel(int level);
 	// OBS: nu poti modifica variabila de nrClasses, aceasta se modifica simultan cu clasele
-	void showPlayerCharacterDetails();		// afisare tot
-	void modifyClass(PlayerCharacter givenCharacter, int classPos, std::string name = "default", std::string hitDice = "default", std::string description = "default", int level = 1);			// modifica clasa aflata pe pozitia classPos
+	void showPlayerCharacterDetails();				// afisare tot
+	void modifyClass(PlayerCharacter givenCharacter, int classPos, std::string name = "default", std::string hitDice = "default", std::string description = "default", int level = 0);			// modifica clasa aflata pe pozitia classPos
+	void recalculateLevel(PlayerCharacter givenCHaracter);
+	// schimba o clasa din vectorul chosenClass al structurii PlayercCharacter, valorile sunt date default si modifica clasa doar atunci cand sunt introduse valori noi
 };
 
 #endif

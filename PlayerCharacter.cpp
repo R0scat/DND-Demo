@@ -12,12 +12,20 @@ PlayerCharacter::PlayerCharacter() // constructor care creeaza un obiect cu valo
 	this->characterClass[0] = emptyClass;
 	this->nrClasses = 1;
 	this->characterRace = emptyRace;
-	this->level = 1; // placeholder, teoretic n-are niciun nivel inca
+	this->level = 0; // placeholder, teoretic n-are niciun nivel inca
 }
 
-PlayerCharacter::PlayerCharacter(std::string, std::string characterName, Class firstChosenClass, Race characterRace)
+PlayerCharacter::PlayerCharacter(std::string playerName, std::string characterName, Class firstChosenClass, Race characterRace)
 {
-
+	this->playerName = playerName;
+	this->characterName = characterName;
+	this->characterClass[0] = firstChosenClass;
+	this->nrClasses = 1;
+	this->characterRace = characterRace;
+	/*this->level = firstChosenClass.getLevel(); */
+	// OBS:: level-ul se seteaza DOAR cu functia setLevel
+	// de ce? pt ca imi dadea bug super weird for some reason!!! idk why!!!
+	// probabil AMBIGUITATE!?!?!?!?!?!?!?!
 }
 
 PlayerCharacter::PlayerCharacter(const PlayerCharacter& obj)
@@ -96,16 +104,33 @@ void PlayerCharacter::setCharacterRace(Race toSet)
 {
 	this->characterRace = toSet;
 }
-void PlayerCharacter::showPlayerCharacterDetails()
+
+void PlayerCharacter::setLevel(int level)
 {
-	std::cout << this->playerName;
-	std::cout << this->characterName;
-	std::cout << this->level;
-	for (int i = 0; i < this->nrClasses; i++)
-		std::cout << this->characterClass[i];
+	this->level = level;
 }
 
-void PlayerCharacter::modifyClass(PlayerCharacter givenCharacter, int classPos, std::string name = "default", std::string hitDice = "default", std::string description = "default", int level = 1)
+void PlayerCharacter::showPlayerCharacterDetails()
+{
+	std::cout << "Player Name: " << this->playerName << "\n";
+	std::cout << "Character Name: " << this->characterName << "\n";
+	std::cout << "Level: " << this->level << "\n";
+	std::cout << "Race: " << this->characterRace << "\n";
+	for (int i = 0; i < this->nrClasses; i++)
+	{
+		characterClass[i].showClassDetails();
+		std::cout << "\n";
+	}
+}
+
+void PlayerCharacter::modifyClass(PlayerCharacter givenCharacter, int classPos, std::string name, std::string hitDice, std::string description, int level)
 {
 	
+}
+
+void PlayerCharacter::recalculateLevel(PlayerCharacter givenCharacter)
+{
+	this->level = 0;
+	for (int i = 0; i < this->nrClasses; i++)
+		this->level += this->characterClass[i].getLevel();
 }

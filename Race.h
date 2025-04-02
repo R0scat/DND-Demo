@@ -17,6 +17,7 @@ public:
 	void setName(std::string name);
 	void setDescription(std::string description);
 	void showRaceDetails();
+	friend std::ostream& operator << (std::ostream& cout, const Race& obj);
 };
 
 

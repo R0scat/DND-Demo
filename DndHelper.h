@@ -29,11 +29,11 @@ namespace dndHelper {
         std::cout << "Great! Now chose your race :P\n";
         std::cout << "1. Human\n";
         std::cout << "2. Elf\n";
-        std::cout << "3. Dwarf\n";
+        std::cout << "3. Dragonborn\n";
         std::cout << "4. Halfling\n";
         std::cout << "5. Gnome\n";
 		std::cout << "6. Half-Elf\n";
-		std::cout << "7. Half-Orc\n";
+		std::cout << "7. Fairy\n";
 		std::cout << "8. Tiefling\n";
     }
 
@@ -141,6 +141,13 @@ namespace dndHelper {
         std::cout << "Now, choose your level (reminder: unless multi-classing, your character can be at most lvl 20)\n";
         std::cin >> lvl;
         chosenClass.setLevel(lvl);
+
+        // DEBUG !!!!
+        std::cout << "\n";
+        std::cout << chosenClass;
+        std::cout << "\n";
+        // DEBUG !!!
+
         return chosenClass;
     }
 
@@ -154,31 +161,31 @@ namespace dndHelper {
         case 1: // human 
         {
             chosenRace.setName("Human");
-            chosenRace.setDescription("");
+            chosenRace.setDescription("Found throughout the multiverse, humans are as varied as they are numerous.");
             break;
         }
         case 2: // elf
         {
             chosenRace.setName("Elf");
-            chosenRace.setDescription("");
+            chosenRace.setDescription("The elves’ curiosity led many of them to explore other planes of existence.");
             break;
         }
         case 3: // dwarf
         {
             chosenRace.setName("Dwarf");
-            chosenRace.setDescription("");
+            chosenRace.setDescription("Dwarves were raised from the earth in the elder days by a deity of the forge.");
             break;
         }
         case 4: // halfling
         {
             chosenRace.setName("Halfling");
-            chosenRace.setDescription("");
+            chosenRace.setDescription("Halflings possess a brave and adventurous spirit that leads them on journeys of discovery.");
             break;
         }
-        case 5: // gnome
+        case 5: // dragonborn
         {
-            chosenRace.setName("Gnome");
-            chosenRace.setDescription("");
+            chosenRace.setName("Dragonborn");
+            chosenRace.setDescription("The ancestors of dragonborn hatched from the eggs of chromatic and metallic dragons.");
             break;
         }
         case 6: // half-elf
@@ -187,16 +194,16 @@ namespace dndHelper {
             chosenRace.setDescription("");
             break;
         }
-        case 7: // half-orc
+        case 7: // fairy
         {
-            chosenRace.setName("Half-Orc");
-            chosenRace.setDescription("");
+            chosenRace.setName("Fairy");
+            chosenRace.setDescription("Infused with the magic of the Feywild, most fairies look like Small elves with insectile wings, but each fairy has a special physical characteristic that sets the fairy apart.");
             break;
         }
         case 8: // tiefling
         {
             chosenRace.setName("Tiefling");
-            chosenRace.setDescription("");
+            chosenRace.setDescription("Tieflings are either born in the Lower Planes or have fiendish ancestors who originated there.");
             break;
         }
         default: // cand nu introduce o valoare existenta

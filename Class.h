@@ -8,16 +8,16 @@ class Class {
 	std::string name;
 	std::string hitDice;
 	std::string description;
-	int level;
+	int classLevel;
 public:
 	Class();															     // constructor simplu clasa
 	Class(std::string name, std::string hitDice, std::string description);   // constructor parametrii
 	Class(const Class& obj);											     // constructor copiere
 	~Class();															     // destructor
-	std::string getName();												     // getter nume
-	std::string getHitDice();											     // getter hd
-	std::string getDescription();										     // getter desc
-	int getLevel();														     // getter lvl
+	std::string getName();												     // getter nume -> returneaza numele
+	std::string getHitDice();											     // getter hd ---> returneaza hit dice-ul
+	std::string getDescription();										     // getter desc -> returneaza desc
+	int getLevel();														     // getter lvl --> returneaza level-ul
 	void setName(std::string name);										     // setter nume
 	void setHitDice(std::string hitDice);								     // setter hd
 	void setDescription(std::string description);						     // setter desc
