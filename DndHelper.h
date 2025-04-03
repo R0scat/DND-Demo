@@ -29,9 +29,9 @@ namespace dndHelper {
         std::cout << "Great! Now chose your race :P\n";
         std::cout << "1. Human\n";
         std::cout << "2. Elf\n";
-        std::cout << "3. Dragonborn\n";
+        std::cout << "3. Dwarf\n";
         std::cout << "4. Halfling\n";
-        std::cout << "5. Gnome\n";
+        std::cout << "5. Dragonborn\n";
 		std::cout << "6. Half-Elf\n";
 		std::cout << "7. Fairy\n";
 		std::cout << "8. Tiefling\n";
@@ -228,13 +228,13 @@ namespace dndHelper {
 
     inline void menu()
     {
-        std::cout << "Your character basics have all been set up, what would you like to do?";
-        std::cout << "1. add another class";
-        std::cout << "2. add equipment";
-        std::cout << "3. add backstory";
-        std::cout << "4. pick abilities (available at current level)";
-        std::cout << "5. level up";
-        std::cout << "6. quit (deleting the character...)";
+        std::cout << "Your character basics have all been set up, what would you like to do?\n";
+        std::cout << "1. add another class\n";
+        std::cout << "2. add equipment\n";
+        std::cout << "3. add backstory\n";
+        std::cout << "4. pick abilities (available at current level)\n";
+        std::cout << "5. level up\n";
+        std::cout << "6. quit (deleting the character...)\n";
     }
 }
 

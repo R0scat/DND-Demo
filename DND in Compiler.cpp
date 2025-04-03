@@ -5,7 +5,7 @@
 #include "PlayerCharacter.h"
 
 void start() {
-    int option, lvl;
+    int option, lvl, ongoing = 1;
 	Class chosenClass;
     Race chosenRace;
     std::string username, characterName;
@@ -32,7 +32,14 @@ void start() {
     std::cout << "Great! Your character currently looks like this:\n";
     PC.showPlayerCharacterDetails();
 
-    dndHelper::menu();
+    while (ongoing)
+    {
+        dndHelper::menu();
+        std::cin >> option;
+        if (option == 6)
+            ongoing = 0;
+    }
+    
 }
 
 int main()

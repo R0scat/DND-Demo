@@ -2,4 +2,5 @@
 C:\Users\maiar\Documents\An1\Semestrul 2\POO\DND in Compiler\DND in Compiler.cpp(8,17): warning C4101: 'lvl': unreferenced local variable
   PlayerCharacter.cpp
   Generating Code...
+  LINK : C:\Users\maiar\Documents\An1\Semestrul 2\POO\DND in Compiler\x64\Debug\DND in Compiler.exe not found or not built by the last incremental link; performing full link
   DND in Compiler.vcxproj -> C:\Users\maiar\Documents\An1\Semestrul 2\POO\DND in Compiler\x64\Debug\DND in Compiler.exe
