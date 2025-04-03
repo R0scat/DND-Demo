@@ -3,6 +3,8 @@
 #define DNDHELPER_H
 
 #include <iostream>
+#include <cstring>
+#include <fstream>
 #include "Class.h"
 #include "Race.h"
 
@@ -35,6 +37,61 @@ namespace dndHelper {
 		std::cout << "6. Half-Elf\n";
 		std::cout << "7. Fairy\n";
 		std::cout << "8. Tiefling\n";
+    }
+
+    inline int checkIfNumber(char optionString[50])
+    {
+        if (strlen(optionString) == 1) // ia dupa lungime
+        {
+            std::cout << optionString;
+            if (strchr("1234567890", optionString[0]) != NULL) // verifica daca e printre cifre
+                return 1;
+        }
+        if (strlen(optionString) == 2)
+        {
+            std::cout << optionString;
+            if (strchr("1234567890", optionString[0]) != NULL || strchr("1234567890.", optionString[1]) != NULL)
+                return 1; // verifica ambele cifre + daca e punct
+        }   
+        return NULL;
+    }
+
+    inline void convertStringToFormat(char optionString[50])
+    {
+        if (optionString[0] <= 'z' && optionString[0] >= 'a')
+            optionString[0] -= 'a' - 'A';
+        for (int i = 1; i < strlen(optionString); i++)
+            if (optionString[i] >= 'A' && optionString[i] <= 'Z')
+                optionString[i] += 'a' - 'A';
+    }
+
+    inline int makeInt(char optionString[50], int classOrRace) // class = 1; race = 2
+    {
+        char choises[12][10];
+        dndHelper::convertStringToFormat(optionString);
+        std::cout << "\n" << optionString << "\n";
+        if (classOrRace == 1) // verifica daca tre sa caute printre clase
+        {
+            std::ifstream fin("resourcesClass.txt");
+            for (int i = 0; i < 12; i++) // for pt a face matricea de char pt clase 
+                fin >> choises[i];
+            for (int i = 0; i < 12; i++)
+                if (strstr(optionString, choises[i]) != NULL)
+                    return i + 1; // sunt puse in ordinea din mesajul dat, deci se returneaza pozitia + 1 (indexare de la 0)
+        }
+        return 1;
+    }
+
+    inline int parseMessage(char optionString[50], int classOrRace)
+    {
+        int optionInt;
+
+        if (dndHelper::checkIfNumber(optionString) == NULL)
+            optionInt = dndHelper::makeInt(optionString, classOrRace); // cazul in care au introdus an entire ass word! lmao
+        else
+            optionInt = int(optionString[0] - '0'); // cazul in care au introdus 1 sau 1. sau ceva de genul
+
+        return optionInt;
     }
 
     inline Class pickClass(int option) {// big switch case for every available class lol - de la 1 la 12

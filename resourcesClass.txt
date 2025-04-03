@@ -1,0 +1,12 @@
+Paladin
+Wizard
+Rogue
+Sorcerer
+Druid
+Warlock
+Fighter
+Barbarian
+Artificer
+Cleric
+Monk
+Bard
