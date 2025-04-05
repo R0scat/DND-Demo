@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "DndHelper.h"
 #include "Class.h"
 #include "Race.h"
@@ -16,20 +17,20 @@ void start() {
     std::cout << std::endl;
 
     std::cout << "Now, let's start by picking your class, race and level!\n";
-    dndHelper::pickClassMessage(); // includes telling the user to pick their class !!!!
-    std::cin >> optionString;
-
+    dndHelper::pickClassMessage(); // includes telling the user to pick their class + level!!!!
+    //std::cin >> optionString;
+    std::cin.get();
+    std::cin.getline(optionString, 51);
+	//std::cout << optionString << std::endl;  // linie de debug
     optionInt = dndHelper::parseMessage(optionString, 1); // pt clasa parseaza cu 1; pt rasa cu 2
-
-    //if (dndHelper::checkIfNumber(optionString) == NULL)
-    //    optionInt = dndHelper::makeInt(optionString, 1); // cazul in care au introdus an entire ass word! lmao
-    //else
-    //    optionInt = int(optionString[0] - '0'); // cazul in care au introdus 1 sau 1. sau ceva de genul
-
     chosenClass = dndHelper::pickClass(optionInt); // functie din namespace dndHelper facuta sa ajute utilizatorul la alegerea claseo
 
     dndHelper::pickRaceMessage(); // doar un mesaj ca sa aleaga utilizatorul user
-    std::cin >> optionInt;
+    //std::cin >> optionString;
+    std::cin.get();
+    std::cin.getline(optionString, 51);
+    //std::cout << optionString << std::endl;  // linie de debug
+    optionInt = dndHelper::parseMessage(optionString, 2);
     chosenRace = dndHelper::pickRace(optionInt);
     //chosenRace.showRaceDetails();
 
@@ -45,8 +46,7 @@ void start() {
     {
         dndHelper::menu();
         std::cin >> optionInt;
-        if (optionInt == 6)
-            ongoing = 0;
+        dndHelper::menuPicker(optionInt, ongoing);
     }
     
 }

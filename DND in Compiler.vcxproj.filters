@@ -62,5 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="resourcesClass.txt" />
+    <Text Include="resourcesRace.txt" />
   </ItemGroup>
 </Project>

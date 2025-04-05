@@ -43,13 +43,13 @@ namespace dndHelper {
     {
         if (strlen(optionString) == 1) // ia dupa lungime
         {
-            std::cout << optionString;
+            //std::cout << optionString; //debug 
             if (strchr("1234567890", optionString[0]) != NULL) // verifica daca e printre cifre
                 return 1;
         }
         if (strlen(optionString) == 2)
         {
-            std::cout << optionString;
+            //std::cout << optionString; //debug 
             if (strchr("1234567890", optionString[0]) != NULL || strchr("1234567890.", optionString[1]) != NULL)
                 return 1; // verifica ambele cifre + daca e punct
         }   
@@ -58,9 +58,7 @@ namespace dndHelper {
 
     inline void convertStringToFormat(char optionString[50])
     {
-        if (optionString[0] <= 'z' && optionString[0] >= 'a')
-            optionString[0] -= 'a' - 'A';
-        for (int i = 1; i < strlen(optionString); i++)
+        for (int i = 0; i < strlen(optionString); i++)
             if (optionString[i] >= 'A' && optionString[i] <= 'Z')
                 optionString[i] += 'a' - 'A';
     }
@@ -69,7 +67,7 @@ namespace dndHelper {
     {
         char choises[12][10];
         dndHelper::convertStringToFormat(optionString);
-        std::cout << "\n" << optionString << "\n";
+        //std::cout << "\n" << optionString << "\n";    // cod pt debug 
         if (classOrRace == 1) // verifica daca tre sa caute printre clase
         {
             std::ifstream fin("resourcesClass.txt");
@@ -79,7 +77,16 @@ namespace dndHelper {
                 if (strstr(optionString, choises[i]) != NULL)
                     return i + 1; // sunt puse in ordinea din mesajul dat, deci se returneaza pozitia + 1 (indexare de la 0)
         }
-        return 1;
+		else if (classOrRace == 2) // verifica daca tre sa caute printre rase
+		{
+			std::ifstream fin("resourcesRace.txt");
+			for (int i = 0; i < 8; i++) // for pt a face matricea de char pt rase 
+				fin >> choises[i];
+            for (int i = 0; i < 8; i++)
+                if (strstr(optionString, choises[i]) != NULL)
+                    return i + 1;
+		}
+        return 0;
     }
 
     inline int parseMessage(char optionString[50], int classOrRace)
@@ -98,6 +105,7 @@ namespace dndHelper {
 
         int lvl;
 		Class chosenClass;
+        char optionString[50];
         switch (option)
         {
 
@@ -190,8 +198,9 @@ namespace dndHelper {
         default: // functia se reapeleaza daca optiunea e invalida
         {
             std::cout << "Option invalid, try again?\n";
-            std::cin >> option;
-            dndHelper::pickClass(option);
+            std::cin >> optionString;
+			option = dndHelper::parseMessage(optionString, 1); // pt clasa parseaza cu 1; pt rasa cu 2
+			dndHelper::pickClass(option);
         }
 
         }
@@ -293,6 +302,41 @@ namespace dndHelper {
         std::cout << "5. level up\n";
         std::cout << "6. quit (deleting the character...)\n";
     }
+
+	inline void menuPicker(int option, int &ongoing)
+	{
+		switch (option)
+		{
+		case 1:
+			std::cout << "Adding another class...\n";
+			break;
+		case 2:
+			std::cout << "Adding equipment...\n";
+			break;
+		case 3:
+			std::cout << "Adding backstory...\n";
+			break;
+		case 4:
+			std::cout << "Picking abilities...\n";
+			break;
+		case 5:
+			std::cout << "Leveling up...\n";
+			break;
+		case 6:
+        {
+            std::cout << "Quitting...\n";
+            ongoing = 0;
+            break;
+        }
+        default:
+        {
+            std::cout << "Invalid option, try again!\n";
+            std::cin >> option;
+            dndHelper::menuPicker(option, ongoing);
+            break;
+        }
+		}
+	}
 }
 
 
