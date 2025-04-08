@@ -7,6 +7,7 @@
 #include <fstream>
 #include "Class.h"
 #include "Race.h"
+#include "PlayerCharacter.h"
 
 namespace dndHelper {
     inline void pickClassMessage() { // mesajul dat la inceput de tot 
@@ -103,7 +104,7 @@ namespace dndHelper {
 
     inline Class pickClass(int option) {// big switch case for every available class lol - de la 1 la 12
 
-        int lvl;
+        int lvl, optionInt;
 		Class chosenClass;
         char optionString[50];
         switch (option)
@@ -198,22 +199,20 @@ namespace dndHelper {
         default: // functia se reapeleaza daca optiunea e invalida
         {
             std::cout << "Option invalid, try again?\n";
-            std::cin >> optionString;
-			option = dndHelper::parseMessage(optionString, 1); // pt clasa parseaza cu 1; pt rasa cu 2
-			dndHelper::pickClass(option);
+            std::cin.getline(optionString, 51);
+			optionInt = dndHelper::parseMessage(optionString, 1); // pt clasa parseaza cu 1; pt rasa cu 2
+			//std::cout << optionString << std::endl;  // linie de debug
+            chosenClass = dndHelper::pickClass(optionInt);
         }
 
         }
-        std::cout << "Now, choose your level (reminder: unless multi-classing, your character can be at most lvl 20)\n";
-        std::cin >> lvl;
-        chosenClass.setLevel(lvl);
-
         return chosenClass;
     }
 
     inline Race pickRace(int option) // returneaza race-ul corect ales de utilizator
     {
-
+		int optionInt;
+        char optionString[51];
 		Race chosenRace;
         switch (option)
         {
@@ -269,8 +268,10 @@ namespace dndHelper {
         default: // cand nu introduce o valoare existenta
         {
             std::cout << "Option not available, try again?\n";
-			std::cin >> option;
-			dndHelper::pickRace(option);
+            //std::cin.get();
+            std::cin.getline(optionString, 51);
+            optionInt = dndHelper::parseMessage(optionString, 2);
+			chosenRace = dndHelper::pickRace(optionInt);
         }
 
         }
@@ -279,50 +280,63 @@ namespace dndHelper {
 
     inline void pickPlayerCharacter() // just chooses and creates the PC, IF YOU WANT TO DISPLAY ATRIBUTES USE THE CLASS FUNCTION!!!
     {
-        int option;
+        int optionInt, lvl;
+        char optionString[51];
         Class chosenClass;
         Race chosenRace;
 
         dndHelper::pickClassMessage();
-        std::cin >> option;
-        chosenClass = dndHelper::pickClass(option);
+        std::cin.get();
+        std::cin.getline(optionString, 51);
+		optionInt = dndHelper::parseMessage(optionString, 1); 
+        chosenClass = dndHelper::pickClass(optionInt);
+
+        std::cout << "Now, choose your level (reminder: unless multi-classing, your character can be at most lvl 20)\n";
+        std::cin >> lvl;
+        chosenClass.setLevel(lvl);
 
         dndHelper::pickRaceMessage();
-        std::cin >> option;
-        chosenRace = dndHelper::pickRace(option);
+        std::cin.get();
+        std::cin.getline(optionString, 51);
+        optionInt = dndHelper::parseMessage(optionString, 2);
+        chosenRace = dndHelper::pickRace(optionInt);
     }
 
     inline void menu()
     {
         std::cout << "Your character basics have all been set up, what would you like to do?\n";
-        std::cout << "1. add another class\n";
-        std::cout << "2. add equipment\n";
-        std::cout << "3. add backstory\n";
-        std::cout << "4. pick abilities (available at current level)\n";
-        std::cout << "5. level up\n";
-        std::cout << "6. quit (deleting the character...)\n";
+        std::cout << "1. show character details\n";
+        std::cout << "2. add another class\n";
+        std::cout << "3. add equipment\n";
+        std::cout << "4. add backstory\n";
+        std::cout << "5. pick abilities (available at current level)\n";
+        std::cout << "6. level up\n";
+        std::cout << "7. quit (deleting the character...)\n";
     }
 
-	inline void menuPicker(int option, int &ongoing)
+	inline void menuPicker(int option, int &ongoing, PlayerCharacter &PC)
 	{
 		switch (option)
 		{
 		case 1:
-			std::cout << "Adding another class...\n";
+			PC.showPlayerCharacterDetails();
 			break;
 		case 2:
-			std::cout << "Adding equipment...\n";
+			std::cout << "Adding another class...\n\n";
 			break;
 		case 3:
-			std::cout << "Adding backstory...\n";
+			std::cout << "Adding equipment...\n\n";
 			break;
 		case 4:
-			std::cout << "Picking abilities...\n";
+			std::cout << "Adding backstory...\n\n";
 			break;
 		case 5:
-			std::cout << "Leveling up...\n";
+			std::cout << "Picking abilities...\n\n";
 			break;
 		case 6:
+			std::cout << "Leveling up...\n\n";
+			break;
+		case 7:
         {
             std::cout << "Quitting...\n";
             ongoing = 0;
@@ -332,7 +346,7 @@ namespace dndHelper {
         {
             std::cout << "Invalid option, try again!\n";
             std::cin >> option;
-            dndHelper::menuPicker(option, ongoing);
+            dndHelper::menuPicker(option, ongoing, PC);
             break;
         }
 		}
