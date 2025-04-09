@@ -19,19 +19,19 @@
       "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:PlayerCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\__msvc_ostream.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\resourcesClass.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:resourcesClass.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\resourcesRace.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:resourcesRace.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\resourcesClass.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:resourcesClass.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\__msvc_ostream.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\Race.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -64,22 +64,9 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 231,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 171,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "__msvc_ostream.hpp",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\__msvc_ostream.hpp",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\__msvc_ostream.hpp",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\__msvc_ostream.hpp",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\__msvc_ostream.hpp",
-              "ViewState": "AgIAAAkDAAAAAAAAAAAAABYDAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-08T19:44:23.394Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -88,7 +75,7 @@
               "RelativeDocumentMoniker": "DND in Compiler.cpp",
               "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\DND in Compiler.cpp",
               "RelativeToolTip": "DND in Compiler.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADYAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-28T18:08:23.181Z",
               "EditorCaption": ""
@@ -96,14 +83,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Entity.cpp",
-              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\Entity.cpp",
-              "RelativeDocumentMoniker": "Entity.cpp",
-              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\Entity.cpp",
-              "RelativeToolTip": "Entity.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-02T11:20:49.838Z"
+              "Title": "resourcesRace.txt",
+              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\resourcesRace.txt",
+              "RelativeDocumentMoniker": "resourcesRace.txt",
+              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\resourcesRace.txt",
+              "RelativeToolTip": "resourcesRace.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-04-05T19:55:12.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "resourcesClass.txt",
+              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\resourcesClass.txt",
+              "RelativeDocumentMoniker": "resourcesClass.txt",
+              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\resourcesClass.txt",
+              "RelativeToolTip": "resourcesClass.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-04-03T15:17:15.248Z"
             },
             {
               "$type": "Document",
@@ -119,27 +118,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "resourcesRace.txt",
-              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\resourcesRace.txt",
-              "RelativeDocumentMoniker": "resourcesRace.txt",
-              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\resourcesRace.txt",
-              "RelativeToolTip": "resourcesRace.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-04-05T19:55:12.198Z"
+              "DocumentIndex": 7,
+              "Title": "Entity.cpp",
+              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\Entity.cpp",
+              "RelativeDocumentMoniker": "Entity.cpp",
+              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\Entity.cpp",
+              "RelativeToolTip": "Entity.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-02T11:20:49.838Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "resourcesClass.txt",
-              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\resourcesClass.txt",
-              "RelativeDocumentMoniker": "resourcesClass.txt",
-              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\resourcesClass.txt",
-              "RelativeToolTip": "resourcesClass.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-04-03T15:17:15.248Z"
+              "DocumentIndex": 6,
+              "Title": "__msvc_ostream.hpp",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\__msvc_ostream.hpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\__msvc_ostream.hpp",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\__msvc_ostream.hpp",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\__msvc_ostream.hpp",
+              "ViewState": "AgIAAAkDAAAAAAAAAAAAABYDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-08T19:44:23.394Z"
             },
             {
               "$type": "Document",
@@ -204,7 +203,7 @@
           ]
         },
         {
-          "DockedWidth": 169,
+          "DockedWidth": 229,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -215,7 +214,7 @@
               "RelativeDocumentMoniker": "DndHelper.h",
               "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\DndHelper.h",
               "RelativeToolTip": "DndHelper.h",
-              "ViewState": "AgIAADgBAAAAAAAAAAAAAEcBAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAF8BAAAAAAAAAAAAAG0BAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-03T09:54:05.793Z",
               "EditorCaption": ""
@@ -228,7 +227,7 @@
               "RelativeDocumentMoniker": "PlayerCharacter.h",
               "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\PlayerCharacter.h",
               "RelativeToolTip": "PlayerCharacter.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-03-28T18:13:14.476Z",
               "EditorCaption": ""
@@ -241,7 +240,7 @@
               "RelativeDocumentMoniker": "PlayerCharacter.cpp",
               "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul 2\\POO\\DND in Compiler\\PlayerCharacter.cpp",
               "RelativeToolTip": "PlayerCharacter.cpp",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAHIAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAIkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-01T08:03:38.691Z",
               "EditorCaption": ""

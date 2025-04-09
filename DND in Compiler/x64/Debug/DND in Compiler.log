@@ -1,9 +1,9 @@
 ﻿  DND in Compiler.cpp
-C:\Users\maiar\Documents\An1\Semestrul 2\POO\DND in Compiler\DndHelper.h(107,13): warning C4101: 'lvl': unreferenced local variable
+C:\Users\maiar\Documents\An1\Semestrul 2\POO\DND in Compiler\DndHelper.h(120,13): warning C4101: 'lvl': unreferenced local variable
   (compiling source file 'DND%20in%20Compiler.cpp')
   
   PlayerCharacter.cpp
-C:\Users\maiar\Documents\An1\Semestrul 2\POO\DND in Compiler\DndHelper.h(107,13): warning C4101: 'lvl': unreferenced local variable
+C:\Users\maiar\Documents\An1\Semestrul 2\POO\DND in Compiler\DndHelper.h(120,13): warning C4101: 'lvl': unreferenced local variable
   (compiling source file 'PlayerCharacter.cpp')
   
   Generating Code...

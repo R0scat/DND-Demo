@@ -75,6 +75,11 @@ Class PlayerCharacter::getSpecificCharacterClass(int pos)
 	return this->characterClass[pos];
 }
 
+int PlayerCharacter::getNumberOfClasses()
+{
+	return this->nrClasses;
+}
+
 void PlayerCharacter::showAllCharacterClasses()
 {
 	for (int i = 0; i < this->nrClasses; i++)
@@ -93,7 +98,8 @@ void PlayerCharacter::setCharacterName(std::string name)
 
 void PlayerCharacter::addCharacterClass(Class toBeAdded)
 {
-	this->characterClass[this->nrClasses + 1] = toBeAdded;
+	this->nrClasses++;
+	this->characterClass[this->nrClasses - 1] = toBeAdded;
 }
 
 
@@ -122,12 +128,16 @@ void PlayerCharacter::showPlayerCharacterDetails()
 	}
 }
 
-void PlayerCharacter::modifyClass(PlayerCharacter givenCharacter, int classPos, std::string name, std::string hitDice, std::string description, int level)
+void PlayerCharacter::modifyClass(PlayerCharacter &givenCharacter, int classPos, std::string name, int level)
 {
-	
+	if (name != "")
+		this->characterClass[classPos].setName(name);
+	if (level)
+		this->characterClass[classPos].setLevel(this->characterClass[classPos].getLevel() + 1);
+	givenCharacter.recalculateLevel(givenCharacter);
 }
 
-void PlayerCharacter::recalculateLevel(PlayerCharacter givenCharacter)
+void PlayerCharacter::recalculateLevel(PlayerCharacter& givenCharacter)
 {
 	this->level = 0;
 	for (int i = 0; i < this->nrClasses; i++)

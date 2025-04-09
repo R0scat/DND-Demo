@@ -27,6 +27,7 @@ public:
 	std::string getCharacterName();
 	Class getSpecificCharacterClass(int pos);
 	Race getCharacterRace();
+	int getNumberOfClasses();
 	void showAllCharacterClasses();
 	// settere
 	void setPlayerName(std::string name);
@@ -36,8 +37,8 @@ public:
 	void setLevel(int level);
 	// OBS: nu poti modifica variabila de nrClasses, aceasta se modifica simultan cu clasele
 	void showPlayerCharacterDetails();				// afisare tot
-	void modifyClass(PlayerCharacter givenCharacter, int classPos, std::string name = "default", std::string hitDice = "default", std::string description = "default", int level = 0);			// modifica clasa aflata pe pozitia classPos
-	void recalculateLevel(PlayerCharacter givenCHaracter);
+	void modifyClass(PlayerCharacter& givenCharacter, int classPos, std::string name = "", int level = 0);			// modifica clasa aflata pe pozitia classPos
+	void recalculateLevel(PlayerCharacter &givenCharacter);
 	// schimba o clasa din vectorul chosenClass al structurii PlayercCharacter, valorile sunt date default si modifica clasa doar atunci cand sunt introduse valori noi
 };
 

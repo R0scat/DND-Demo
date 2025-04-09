@@ -10,9 +10,15 @@
 #include "PlayerCharacter.h"
 
 namespace dndHelper {
+    inline void clearScreen()
+    {
+        std::cin.get();
+        system("cls");
+    }
+
     inline void pickClassMessage() { // mesajul dat la inceput de tot 
 
-        std::cout << "Pick your class:\n";
+        std::cout << "Pick a class:\n";
         std::cout << "1.  Paladin\n";
         std::cout << "2.  Wizard\n";
         std::cout << "3.  Rogue\n";
@@ -42,19 +48,27 @@ namespace dndHelper {
 
     inline int checkIfNumber(char optionString[50])
     {
-        if (strlen(optionString) == 1) // ia dupa lungime
+        int nr[10], len = 0, option = 0;
+        for (int i = 0; i < strlen(optionString); i++)
         {
-            //std::cout << optionString; //debug 
-            if (strchr("1234567890", optionString[0]) != NULL) // verifica daca e printre cifre
-                return 1;
+            if (strchr("0123456789", optionString[i]) != NULL) // verifica daca e printre cifre
+            {
+				nr[len] = int(optionString[i] - '0'); // converteste in int
+                len++;
+            }
         }
-        if (strlen(optionString) == 2)
+        if (len == 0)
+            return NULL; // returneaza null daca  nu e numar
+        else
         {
-            //std::cout << optionString; //debug 
-            if (strchr("1234567890", optionString[0]) != NULL || strchr("1234567890.", optionString[1]) != NULL)
-                return 1; // verifica ambele cifre + daca e punct
-        }   
-        return NULL;
+			for (int i = 0; i < len; i++)
+			{
+				option = nr[i] + option * 10;
+			}
+           // std::cout << option; // debug
+            return option; // retunreaza nr ales
+        }
+        
     }
 
     inline void convertStringToFormat(char optionString[50])
@@ -66,7 +80,7 @@ namespace dndHelper {
 
     inline int makeInt(char optionString[50], int classOrRace) // class = 1; race = 2
     {
-        char choises[12][10];
+        char choises[12][40];
         dndHelper::convertStringToFormat(optionString);
         //std::cout << "\n" << optionString << "\n";    // cod pt debug 
         if (classOrRace == 1) // verifica daca tre sa caute printre clase
@@ -97,8 +111,7 @@ namespace dndHelper {
         if (dndHelper::checkIfNumber(optionString) == NULL)
             optionInt = dndHelper::makeInt(optionString, classOrRace); // cazul in care au introdus an entire ass word! lmao
         else
-            optionInt = int(optionString[0] - '0'); // cazul in care au introdus 1 sau 1. sau ceva de genul
-
+            optionInt = checkIfNumber(optionString);
         return optionInt;
     }
 
@@ -316,14 +329,32 @@ namespace dndHelper {
 
 	inline void menuPicker(int option, int &ongoing, PlayerCharacter &PC)
 	{
+        char optionString[50];
+        int optionInt;
+        Class chosenClass;
+        dndHelper::clearScreen();
 		switch (option)
 		{
 		case 1:
 			PC.showPlayerCharacterDetails();
 			break;
 		case 2:
-			std::cout << "Adding another class...\n\n";
-			break;
+        {
+            std::cout << "Adding another class...\n\n";
+            dndHelper::pickClassMessage();
+            std::cin.getline(optionString, 51);
+			optionInt = dndHelper::parseMessage(optionString, 1);
+			chosenClass = dndHelper::pickClass(optionInt);
+            std::cout << chosenClass << std::endl;
+
+            std::cout << "Choose level for this class (total character level will be equal to the sum of thhe two classes)\n";
+			std::cin >> optionInt;
+			chosenClass.setLevel(optionInt);
+	
+			PC.addCharacterClass(chosenClass);
+            PC.recalculateLevel(PC);
+            break;
+        }
 		case 3:
 			std::cout << "Adding equipment...\n\n";
 			break;
@@ -334,8 +365,21 @@ namespace dndHelper {
 			std::cout << "Picking abilities...\n\n";
 			break;
 		case 6:
-			std::cout << "Leveling up...\n\n";
-			break;
+        {
+            int classNo;
+            if (PC.getNumberOfClasses() != 1)
+            {
+                std::cout << "Please select the class index that you'd like to level up\n";
+                std::cin >> classNo;
+                PC.modifyClass(PC, classNo - 1, "", 1);
+            }
+            else
+            {
+                std::cout << "Leveling up!!\n";
+                PC.modifyClass(PC, 0, "", 1);
+            }
+            break;
+        }
 		case 7:
         {
             std::cout << "Quitting...\n";

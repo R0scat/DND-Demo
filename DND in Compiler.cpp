@@ -44,6 +44,9 @@ void start() {
 
     std::cout << "Great! Your character currently looks like this:\n";
     PC.showPlayerCharacterDetails();
+    std::cout << "Press enter to continue!\n";
+
+    dndHelper::clearScreen();
 
     while (ongoing)
     {
