@@ -132,8 +132,14 @@ void PlayerCharacter::modifyClass(PlayerCharacter &givenCharacter, int classPos,
 {
 	if (name != "")
 		this->characterClass[classPos].setName(name);
-	if (level)
-		this->characterClass[classPos].setLevel(this->characterClass[classPos].getLevel() + 1);
+	if (characterClass[classPos].getLevel() == 20)
+	{
+		std::cout << "You have reached the maximum level for this class and so can't level it up\n";
+		return;
+	}
+	else 
+		if (level)
+			this->characterClass[classPos].setLevel(this->characterClass[classPos].getLevel() + 1);
 	givenCharacter.recalculateLevel(givenCharacter);
 }
 

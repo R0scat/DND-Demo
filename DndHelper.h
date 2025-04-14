@@ -85,7 +85,7 @@ namespace dndHelper {
         //std::cout << "\n" << optionString << "\n";    // cod pt debug 
         if (classOrRace == 1) // verifica daca tre sa caute printre clase
         {
-            std::ifstream fin("resourcesClass.txt");
+            std::ifstream fin("resources/ClassNames.txt");
             for (int i = 0; i < 12; i++) // for pt a face matricea de char pt clase 
                 fin >> choises[i];
             for (int i = 0; i < 12; i++)
@@ -94,7 +94,7 @@ namespace dndHelper {
         }
 		else if (classOrRace == 2) // verifica daca tre sa caute printre rase
 		{
-			std::ifstream fin("resourcesRace.txt");
+			std::ifstream fin("resources/RaceNames.txt");
 			for (int i = 0; i < 8; i++) // for pt a face matricea de char pt rase 
 				fin >> choises[i];
             for (int i = 0; i < 8; i++)

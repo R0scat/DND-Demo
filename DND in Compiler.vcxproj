@@ -137,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Atribute.h" />
+    <ClInclude Include="AtributeHelper.h" />
     <ClInclude Include="Class.h" />
     <ClInclude Include="DndHelper.h" />
     <ClInclude Include="Entity.h" />
