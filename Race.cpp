@@ -3,52 +3,52 @@
 #include <iostream>
 
 Race::Race() {
-	this->name = "None";
-	this->description = "None";
+	this->m_name = "None";
+	this->m_description = "None";
 }
 
 Race::Race(std::string name, std::string description)
 {
-	this->name = name;
-	this->description = description;
+	this->m_name = name;
+	this->m_description = description;
 }
 
 Race::Race(const Race& RaceObj)
 {
-	this->name = RaceObj.name;
-	this->description = RaceObj.description;
+	this->m_name = RaceObj.m_name;
+	this->m_description = RaceObj.m_description;
 }
 
 Race:: ~Race() {}
 
-std::string Race::getName()
+std::string Race::GetName()
 {
-	return this->name;
+	return this->m_name;
 }
 
-std::string Race::getDescription()
+std::string Race::GetDescription()
 {
-	return this->description;
+	return this->m_description;
 }
 
-void Race::setName(std::string name)
+void Race::SetName(std::string name)
 {
-	this->name = name;
+	this->m_name = name;
 }
 
-void Race::setDescription(std::string description)
+void Race::SetDescription(std::string description)
 {
-	this->description = description;
+	this->m_description = description;
 }
 
-void Race::showRaceDetails()
+void Race::ShowRaceDetails()
 {
-	std::cout << "Name: " << this->name << std::endl;
-	std::cout << "Description: " << this->description << std::endl;
+	std::cout << "Name: " << this->m_name << std::endl;
+	std::cout << "Description: " << this->m_description << std::endl;
 }
 
 std::ostream& operator << (std::ostream& cout, const Race& obj)
 {
-	cout << "	Name: " << obj.name << "\n	description: " << obj.description;
+	cout << "	Name: " << obj.m_name << "\n	description: " << obj.m_description;
 	return cout;
 }

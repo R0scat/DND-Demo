@@ -5,18 +5,18 @@
 #include <iostream>
 
 class Race {
-	std::string name;
-	std::string description;
+	std::string m_name;
+	std::string m_description;
 public:
 	Race();
 	Race(std::string name, std::string description);
 	Race(const Race& RaceObj);
 	~Race();
-	std::string getName();
-	std::string getDescription();
-	void setName(std::string name);
-	void setDescription(std::string description);
-	void showRaceDetails();
+	std::string GetName();
+	std::string GetDescription();
+	void SetName(std::string name);
+	void SetDescription(std::string description);
+	void ShowRaceDetails();
 	friend std::ostream& operator << (std::ostream& cout, const Race& obj);
 };
 

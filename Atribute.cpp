@@ -1,69 +1,69 @@
-#include "Atribute.h"
+#include "atribute.h"
 #include <iostream>
 //#include <fstream>
 
 Atribute::Atribute() 
 {
-	this->type = "None";
-	this->name = "None";
-	this->description = "None";
-	this->level = -1;
+	this->m_type = "None";
+	this->m_name = "None";
+	this->m_description = "None";
+	this->m_level = -1;
 }
 
 Atribute::Atribute(std::string type, std::string name, std::string description, int level)
 {
-	this->type = type;
-	this->name = name;
-	this->description = description;
-	this->level = level;
+	this->m_type = type;
+	this->m_name = name;
+	this->m_description = description;
+	this->m_level = level;
 }
 
 Atribute::Atribute(const Atribute& atrbuteObject)
 {
-	this->type = atrbuteObject.type;
-	this->name = atrbuteObject.name;
-	this->description = atrbuteObject.description;
-	this->level = atrbuteObject.level;
+	this->m_type = atrbuteObject.m_type;
+	this->m_name = atrbuteObject.m_name;
+	this->m_description = atrbuteObject.m_description;
+	this->m_level = atrbuteObject.m_level;
 }
 
 Atribute::~Atribute() {}
 
-void Atribute::setAtributeType(std::string type)
+void Atribute::SetAtributeType(std::string type)
 {
-	this->type = type;
+	this->m_type = type;
 }
 
-void Atribute::setAtributeName(std::string name)
+void Atribute::SetAtributeName(std::string name)
 {
-	this->name = name;
+	this->m_name = name;
 }
 
-void Atribute::setAtributeDescription(std::string description)
+void Atribute::SetAtributeDescription(std::string description)
 {
-	this->description = description;
+	this->m_description = description;
 }
 
-void Atribute::setAtributeLevel(int level)
+void Atribute::SetAtributeLevel(int level)
 {
-	this->level = level;
+	this->m_level = level;
 }
 
-std::string Atribute::getAtributeType()
+std::string Atribute::GetAtributeType()
 {
-	return this->type;
+	return this->m_type;
 }
 
-std::string Atribute::getAtributeName()
+std::string Atribute::GetAtributeName()
 {
-	return this->name;
+	return this->m_name;
 }
 
-std::string Atribute::getAtributeDescription()
+std::string Atribute::GetAtributeDescription()
 {
-	return this->description;
+	return this->m_description;
 }
 
-int Atribute::getAtributeLevel()
+int Atribute::GetAtributeLevel()
 {
-	return this->level;
+	return this->m_level;
 }

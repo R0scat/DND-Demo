@@ -127,27 +127,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Atribute.cpp" />
-    <ClCompile Include="Class.cpp" />
+    <ClCompile Include="atribute.cpp" />
+    <ClCompile Include="class.cpp" />
     <ClCompile Include="DND in Compiler.cpp" />
-    <ClCompile Include="Entity.cpp" />
-    <ClCompile Include="Equipment.cpp" />
-    <ClCompile Include="PlayerCharacter.cpp" />
-    <ClCompile Include="Race.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="equipment.cpp" />
+    <ClCompile Include="player_character.cpp" />
+    <ClCompile Include="race.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Atribute.h" />
-    <ClInclude Include="AtributeHelper.h" />
-    <ClInclude Include="Class.h" />
-    <ClInclude Include="DndHelper.h" />
-    <ClInclude Include="Entity.h" />
-    <ClInclude Include="Equipment.h" />
-    <ClInclude Include="PlayerCharacter.h" />
-    <ClInclude Include="Race.h" />
+    <ClInclude Include="atribute.h" />
+    <ClInclude Include="atribute_helper.h" />
+    <ClInclude Include="class.h" />
+    <ClInclude Include="dnd_helper.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="equipment.h" />
+    <ClInclude Include="player_character.h" />
+    <ClInclude Include="race.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="resourcesClass.txt" />
-    <Text Include="resourcesRace.txt" />
+    <Text Include="resources\class_names.txt" />
+    <Text Include="resources\race_names.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,8 +1,0 @@
-human
-elf
-dwarf
-halfling
-dragonborn 
-half-elf
-fairy
-tiefling

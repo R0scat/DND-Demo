@@ -1,95 +1,95 @@
 #include <iostream>
 #include <string>
-#include "Class.h"
+#include "class.h"
 
 Class::Class()
 {
 	// doar placeholders
-	this->name = "None";
-	this->hitDice = "None";
-	this->description = "None";
-	this->classLevel = 0;
+	this->m_name = "None";
+	this->m_hit_dice = "None";
+	this->m_description = "None";
+	this->m_class_level = 0;
 }
 
 Class::Class(std::string name, std::string hitDice, std::string description, int classLevel)
 {
-	this->name = name;
-	this->hitDice = hitDice;
-	this->description = description;
-	this->classLevel = classLevel;
+	this->m_name = name;
+	this->m_hit_dice = hitDice;
+	this->m_description = description;
+	this->m_class_level = classLevel;
 }
 
 Class::Class(const Class& obj)
 {
-	this->name = obj.name;
-	this->hitDice = obj.hitDice;
-	this->description = obj.description;
-	this->classLevel = obj.classLevel;
+	this->m_name = obj.m_name;
+	this->m_hit_dice = obj.m_hit_dice;
+	this->m_description = obj.m_description;
+	this->m_class_level = obj.m_class_level;
 }
 
 Class::~Class() {}
 
 
-std::string Class::getName()
+std::string Class::GetName()
 {
-	return this->name;
+	return this->m_name;
 }
 
-std::string Class::getHitDice()
+std::string Class::GetHitDice()
 {
-	return this->hitDice;
+	return this->m_hit_dice;
 }
 
-std::string Class::getDescription()
+std::string Class::GetDescription()
 {
-	return this->description;
+	return this->m_description;
 }
 
-int Class::getLevel()
+int Class::GetLevel()
 {
-	return this->classLevel;
+	return this->m_class_level;
 }
 
-void Class::setName(std::string name)
+void Class::SetName(std::string name)
 {
-	this->name = name;
+	this->m_name = name;
 }
 
-void Class::setHitDice(std::string hitDice)
+void Class::SetHitDice(std::string hitDice)
 {
-	this->hitDice = hitDice;
+	this->m_hit_dice = hitDice;
 }
 
-void Class::setDescription(std::string description)
+void Class::SetDescription(std::string description)
 {
-	this->description = description;
+	this->m_description = description;
 }
 
-void Class::setLevel(int level)
+void Class::SetLevel(int level)
 {
 	if (level >= 1 && level <= 20)
 	{
-		this->classLevel = level;
+		this->m_class_level = level;
 	}
 	else
 	{
 		int newLvl;
 		std::cout << "Invalid level, please enter a number between 1 and 20\n";
 		std::cin >> newLvl;
-		this->setLevel(newLvl);
+		this->SetLevel(newLvl);
 	}
 }
 
-void Class::showClassDetails()
+void Class::ShowClassDetails()
 {
-	std::cout << "	Class: " << this->name << std::endl;
-	std::cout << "	Hit Dice: " << this->hitDice << std::endl;
-	std::cout << "	Description: " << this->description << std::endl;
-	std::cout << "	Level: " << this->classLevel << std::endl << std::endl;
+	std::cout << "	Class: " << this->m_name << std::endl;
+	std::cout << "	Hit Dice: " << this->m_hit_dice << std::endl;
+	std::cout << "	Description: " << this->m_description << std::endl;
+	std::cout << "	Level: " << this->m_class_level << std::endl << std::endl;
 }
 
 std::ostream& operator << (std::ostream& cout, const Class& obj)
 {
-	cout << "(name: " << obj.name << ", hit dice: " << obj.hitDice << ", level: " << obj.classLevel << ", description: " << obj.description << ")";
+	cout << "(name: " << obj.m_name << ", hit dice: " << obj.m_hit_dice << ", level: " << obj.m_class_level << ", description: " << obj.m_description << ")";
 	return cout;
 }

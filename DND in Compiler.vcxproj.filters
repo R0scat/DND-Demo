@@ -18,53 +18,53 @@
     <ClCompile Include="DND in Compiler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Atribute.cpp">
+    <ClCompile Include="atribute.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Equipment.cpp">
+    <ClCompile Include="equipment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Entity.cpp">
+    <ClCompile Include="entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerCharacter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Class.cpp">
+    <ClCompile Include="class.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="Race.cpp">
+    <ClCompile Include="race.cpp">
       <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="player_character.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Entity.h">
+    <ClInclude Include="entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Class.h">
+    <ClInclude Include="class.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Atribute.h">
+    <ClInclude Include="atribute.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Equipment.h">
+    <ClInclude Include="equipment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerCharacter.h">
+    <ClInclude Include="race.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DndHelper.h">
+    <ClInclude Include="atribute_helper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Race.h">
+    <ClInclude Include="dnd_helper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AtributeHelper.h">
+    <ClInclude Include="player_character.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="resourcesClass.txt" />
-    <Text Include="resourcesRace.txt" />
+    <Text Include="resources\class_names.txt" />
+    <Text Include="resources\race_names.txt" />
   </ItemGroup>
 </Project>
