@@ -4,11 +4,39 @@
 
 #include <string>
 
+struct SpellAtributes { // for spellcasting classes, will be calculated from stats 
+	int spell_save_dc;
+	int spell_attack_bonus;
+	int number_of_spells;
+};
+
+struct SpellSlots { // keeps track of the number of spell slots available for each level FOR THE CURRENT CHARAXTER (aka determined by class level)
+	int first_lvl;
+	int second_lvl;
+	int third_lvl;
+	int fourth_lvl;
+	int fifth_lvl;
+	int sixth_lvl;
+	int seventh_lvl;
+	int eighth_lvl;
+	int ninth_lvl;
+};
+
+struct SavingThrows { // will be calculated from stats + should be given bonuses by chosen class 
+	int strength;
+	int dexterity;
+	int constitution;
+	int intelligence;
+	int wisdom;
+	int charisma;
+};
+
 class Class {
 	std::string m_name;
 	std::string m_hit_dice;
 	std::string m_description;
 	int m_class_level;
+
 public:
 	Class();															     // constructor simplu clasa
 	Class(std::string name, std::string hitDice, std::string description, int classLevel);   // constructor parametrii

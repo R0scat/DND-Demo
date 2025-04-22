@@ -7,7 +7,56 @@
 #include "class.h"
 #include "race.h"
 
+struct Stats { // will keep the actual number like 13 st, 14 cha lalala
+	int strength;
+	int dexterity;
+	int constitution;
+	int intelligence;
+	int wisdom;
+	int charisma;
+};
 
+struct Skills { // calculating (according to chosen proficiencies) the bonus to those rolls
+	int acrobatics;
+	int animalHandling;
+	int arcana;
+	int athletics;
+	int deception;
+	int history;
+	int insight;
+	int intimidation;
+	int investigation;
+	int medicine;
+	int nature;
+	int perception;
+	int performance;
+	int persuasion;
+	int religion;
+	int sleightOfHand;
+	int stealth;
+	int survival;
+};
+
+struct Proficiencies { // given by chosen class
+	// true or false for most of these except the tools since the tools are objects not a specific type of object
+	bool lightArmor;
+	bool mediumArmor;
+	bool heavyArmor;
+	bool shields;
+	bool simpleWeapons;
+	bool martialWeapons;
+	std::string tools;
+};
+
+struct CharacterDetails
+{ 
+	Stats stats;
+	Skills skills;
+	Proficiencies proficiencies;
+	int total_hp;
+	int current_hp;
+	int level;
+};
 
 class PlayerCharacter : public Entity {
 	std::string m_player_name;
