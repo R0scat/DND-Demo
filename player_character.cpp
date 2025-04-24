@@ -149,3 +149,18 @@ void PlayerCharacter::RecalculateLevel(PlayerCharacter& givenCharacter)
 	for (int i = 0; i < this->m_nr_classes; i++)
 		this->m_level += this->m_character_class[i].GetLevel();
 }
+
+void PlayerCharacter::SetCharacterStats(int str, int dex, int con, int intl, int wis, int chars)
+{
+	this->m_character_details.stats.strength = str;
+	this->m_character_details.stats.dexterity = dex;
+	this->m_character_details.stats.constitution = con;
+	this->m_character_details.stats.charisma = chars;
+	this->m_character_details.stats.intelligence = intl;
+	this->m_character_details.stats.wisdom = wis;
+}
+
+void PlayerCharacter::CalculateSkillBonuses()
+{
+
+}

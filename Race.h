@@ -4,9 +4,20 @@
 
 #include <iostream>
 
+struct RaceBonus // represents the bonus to base stats that each race gives
+{
+	int strength;
+	int dexterity;
+	int constitution;
+	int intelligence;
+	int wisdom;
+	int charisma;
+};
+
 class Race {
 	std::string m_name;
 	std::string m_description;
+	RaceBonus bonus; // to calculate stat bonuses
 public:
 	Race();
 	Race(std::string name, std::string description);

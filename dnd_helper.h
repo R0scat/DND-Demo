@@ -324,7 +324,9 @@ namespace Dnd_Helper {
         std::cout << "4. add backstory\n";
         std::cout << "5. pick abilities (available at current level)\n";
         std::cout << "6. level up\n";
-        std::cout << "7. quit (deleting the character...)\n";
+        std::cout << "7. change character stats (e.g. strenght, charisma ...)\n";
+        std::cout << "8. change ability proficiencies (e.g. arcana, history, perception ...)\n";
+        std::cout << "9. quit (deleting the character...)\n";
     }
 
 	inline void MenuPicker(int option, int &ongoing, PlayerCharacter &pc)
@@ -381,6 +383,14 @@ namespace Dnd_Helper {
             break;
         }
 		case 7:
+        {
+            
+        }
+        case 8:
+        {
+
+        }
+        case 9:
         {
             std::cout << "Quitting...\n";
             ongoing = 0;

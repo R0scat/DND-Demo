@@ -5,7 +5,7 @@
 #include "race.h"
 #include "player_character.h"
 
-void start() {
+static void PlayerMode() {
     int option_int, lvl, ongoing = 1;
 	Class chosen_class;
     Race chosen_race;
@@ -56,10 +56,10 @@ void start() {
         std::cin >> option_int;
         Dnd_Helper::MenuPicker(option_int, ongoing, pc);
     }
-    
+
 }
 
 int main()
 {
-    start();
+    PlayerMode();
 }
