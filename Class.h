@@ -38,7 +38,7 @@ struct SpellSlots { // keeps track of the number of spell slots available for ea
 // lista dinamica de proficiencies (fiind mai multe si diferite in functie de clasa e mai bine decat sa aloc un anumit numar lowk random)
 struct Proficiency
 {
-	char name[50];
+	std::string name;
 	Proficiency* next;
 };
 
@@ -71,7 +71,7 @@ public:
 	void ShowClassDetails();											     // afiseaza toate detaliile clasei cu mesaj frumos <3
 	friend std::ostream& operator << (std::ostream& cout, const Class& obj); // overload pt operatorul "<<"
 	// urm functiile care lucreaza pe lista dinamic alocata de proficiencies
-	void AddProficiency(char name[50]);
+	void AddProficiency(std::string name);
 	void ShowProficiencies();
 	void DeleteFirstProficiency();
 	void DeleteLastProficiency();

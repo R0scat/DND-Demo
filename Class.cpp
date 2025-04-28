@@ -98,10 +98,10 @@ std::ostream& operator << (std::ostream& cout, const Class& obj)
 	return cout;
 }
 
-void Class::AddProficiency(char name[50]) // adauga in lista la final
+void Class::AddProficiency(std::string name) // adauga in lista la final
 {
 	Proficiency* newProficiency = new Proficiency;
-	strcpy(newProficiency->name, name); // copiaza datele relevante
+	newProficiency->name = name; // copiaza datele relevante
 	newProficiency->next = NULL; // nu are la ce altceva sa pointeze pt ca e la finalul listei
 	if (this->m_first_prf == NULL) // verific daca lista are elem
 	{

@@ -1,6 +1,8 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include "dnd_helper.h"
+#include "atribute_helper.h"
 #include "class.h"
 #include "race.h"
 #include "player_character.h"
@@ -59,7 +61,10 @@ static void PlayerMode() {
 
 }
 
+
 int main()
 {
-    PlayerMode();
+    //PlayerMode();
+
+    Atribute_Helper::ReadAtributes(); // currently testing getting atributes for a rando class !!
 }

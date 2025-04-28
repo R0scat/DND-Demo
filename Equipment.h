@@ -7,10 +7,10 @@
 
 class Equipment : public Atribute {
 private:
-	int weight;
-	int value;
+	
+	int m_value;
 public:
-	void setWeight(int weight);
+	
 	void setValue(int value);
 	//int getWeight();
 	//int getValue();

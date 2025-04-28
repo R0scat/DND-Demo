@@ -53,13 +53,13 @@
     <ClInclude Include="race.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="atribute_helper.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="dnd_helper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="player_character.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="atribute_helper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
