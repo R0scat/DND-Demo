@@ -1,0 +1,5 @@
+Blowgun#10 gp#1 piercing#1 lb.#Ammunition (range 25/100), loading
+Crossbow, hand#75 gp#1d6 piercing#3 lb.#Ammunition (range 30/120), light, loading
+Crossbow, heavy#50 gp#1d10 piercing#18 lb.#Ammunition (range 100/400), heavy, loading, two-handed
+Longbow#50 gp#1d8 piercing#2 lb.#Ammunition (range 150/600), heavy, two-handed
+Net#1 gp#—#3 lb.#Special, thrown (range 5/15)

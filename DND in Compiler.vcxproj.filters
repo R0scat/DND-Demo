@@ -62,6 +62,9 @@
     <ClInclude Include="atribute_helper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="iequippable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\class_names.txt" />

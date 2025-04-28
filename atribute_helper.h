@@ -6,6 +6,7 @@
 #include <fstream>
 #include <string>
 #include "class.h"
+#include <regex>
 
 namespace Atribute_Helper
 {
@@ -67,17 +68,7 @@ namespace Atribute_Helper
             }
             
         }
-        test_class.ShowProficiencies();
-        std::cout << std::endl;
         
-        test_class.DeleteFirstProficiency();
-        test_class.ShowProficiencies();
-        std::cout << std::endl;
-
-        test_class.DeleteLastProficiency();
-        test_class.ShowProficiencies();
-        std::cout << std::endl;
-
         fin.close();
     }
 }
