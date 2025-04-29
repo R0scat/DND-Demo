@@ -1,3 +1,4 @@
+#pragma warning(disable : 4996)
 #pragma once
 #ifndef ATRIBUTEHELPER_H
 #define ATRIBUTEHELPER_H
@@ -6,7 +7,10 @@
 #include <fstream>
 #include <string>
 #include "class.h"
-#include <regex>
+#include "player_character.h"
+#include <cstring>
+#include "equipment.h"
+//#include <regex>
 
 namespace Atribute_Helper
 {
@@ -36,7 +40,8 @@ namespace Atribute_Helper
         std::ifstream fin(file_name);
 
         std::string line;
-        Class test_class;
+        Class given_class;
+        PlayerCharacter pc;
         int current_class_atribute = 0;
         // class atributes in this order in file: proficiency, equipment, abilities
         
@@ -50,7 +55,7 @@ namespace Atribute_Helper
             case 1:
             {
                 if (line != "// proficiencies")
-                    test_class.AddProficiency(line);
+                    given_class.AddProficiency(line);
             }
             case 2:
             {
@@ -68,9 +73,37 @@ namespace Atribute_Helper
             }
             
         }
-        
+		pc.AddCharacterClass(given_class);
         fin.close();
     }
+
+    inline void ReadEquipment(Equipment available_equipment[40])
+    {
+        char files[10][50] =
+        {
+            "resources/equipment/martial melee weapons.txt",
+			"resources/equipment/martial ranged weapons.txt",
+			"resources/equipment/simple melee weapons.txt",
+			"resources/equipment/simple ranged weapons.txt",
+        };
+        for (int i = 0; i < 4; i++)
+        {
+            std::ifstream fin(files[i]);
+            char line[250];
+            while (fin.get(line, 140))
+            {
+                fin.get();
+                char* ptr = strtok(line, "#");
+                while (ptr != NULL)
+                {
+					std::cout << ptr << std::endl;
+                    ptr = strtok(NULL, "#");
+                }
+            }
+            fin.close();
+        }
+    }
+
 }
 
 #endif // !ATRIBUTEHELPER_H

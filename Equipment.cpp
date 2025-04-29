@@ -31,3 +31,12 @@ const Value Equipment::GetValue()
 	return this->m_value;
 }
 
+void Equipment::Equip(Class* entity)
+{
+
+}
+
+void Equipment::Unequip(Class* entity)
+{
+
+}

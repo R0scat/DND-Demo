@@ -66,5 +66,15 @@ int main()
 {
     //PlayerMode();
 
-    Atribute_Helper::ReadAtributes(); // currently testing getting atributes for a rando class !!
+    //Atribute_Helper::ReadAtributes(); // currently testing getting atributes for a rando class !!
+    Equipment available_equipment[40];
+    Atribute_Helper::ReadEquipment(available_equipment); // testing file reading function nr.2
+ //   for (int i = 0; i < 38; i++)
+	//{
+	//	std::cout << available_equipment[i].GetAtributeName() << std::endl;
+	//	std::cout << available_equipment[i].GetAtributeDescription() << std::endl;
+	//	std::cout << available_equipment[i].GetAtributeType() << std::endl;
+	//	//std::cout << available_equipment[i].GetValue() << std::endl;
+	//	std::cout << "------------------------\n";
+	//}
 }

@@ -164,3 +164,13 @@ void PlayerCharacter::CalculateSkillBonuses()
 {
 
 }
+
+void PlayerCharacter::Apply()
+{
+
+}
+
+void PlayerCharacter::Remove()
+{
+
+}

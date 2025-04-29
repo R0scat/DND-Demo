@@ -7,6 +7,8 @@
 #include "class.h"
 #include "race.h"
 
+#include "ieffect.h"
+
 struct Stats { // will keep the actual number like 13 st, 14 cha lalala
 	int strength;
 	int dexterity;
@@ -66,7 +68,7 @@ struct CharacterDetails // pun toate astea intr-un singru struct INAINTE sa le p
 	int level;
 };
 
-class PlayerCharacter : public Entity {
+class PlayerCharacter : public Entity, public IEffect {
 	std::string m_player_name;
 	std::string m_character_name;
 	Class m_character_class[12];				// can multiclass up to ten classes max (ca doar atatea sunt ca idee)
@@ -100,6 +102,9 @@ public:
 	void RecalculateLevel(PlayerCharacter &givenCharacter);
 	void CalculateSkillBonuses(); 
 	// schimba o clasa din vectorul chosenClass al structurii PlayercCharacter, valorile sunt date default si modifica clasa doar atunci cand sunt introduse valori noi
+	// override functii virtuale --
+	void Apply() override;
+	void Remove() override;
 };
 
 #endif
