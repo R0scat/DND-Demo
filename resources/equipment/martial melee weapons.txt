@@ -1,5 +1,5 @@
 battleaxe#10 gp#1d8 slashing#4 lb.#versatile (1d10)
-flail#10 gp#1d8 bludgeoning#2 lb.#—
+flail#10 gp#1d8 bludgeoning#2 lb.# none
 glaive#20 gp#1d10 slashing#6 lb.#heavy, reach, two-handed
 greataxe#30 gp#1d12 slashing#7 lb.#heavy, two-handed
 greatsword#50 gp#2d6 slashing#6 lb.#heavy, two-handed
@@ -7,13 +7,12 @@ halberd#20 gp#1d10 slashing#6 lb.#heavy, reach, two-handed
 lance#10 gp#1d12 piercing#6 lb.#reach, special
 longsword#15 gp#1d8 slashing#3 lb.#versatile (1d10)
 maul#10 gp#2d6 bludgeoning#10 lb.#heavy, two-handed
-morningstar#15 gp#1d8 piercing#4 lb.#—
+morningstar#15 gp#1d8 piercing#4 lb.# none
 pike#5 gp#1d10 piercing#18 lb.#heavy, reach, two-handed
 rapier#25 gp#1d8 piercing#2 lb.#finesse
 scimitar#25 gp#1d6 slashing#3 lb.#finesse, light
 shortsword#10 gp#1d6 piercing#2 lb.#finesse, light
 trident#5 gp#1d6 piercing#4 lb.#thrown (range 20/60), versatile (1d8)
-war pick#5 gp#1d8 piercing#2 lb.#—
+war pick#5 gp#1d8 piercing#2 lb.# none
 warhammer#15 gp#1d8 bludgeoning#2 lb.#versatile (1d10)
 whip#2 gp#1d4 slashing#3 lb.#finesse, reach
-

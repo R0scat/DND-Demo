@@ -77,31 +77,69 @@ namespace Atribute_Helper
         fin.close();
     }
 
-    inline void ReadEquipment(Equipment available_equipment[40])
+    inline void ReadEquipment(Equipment available_equipment[40], int& total_equipment)
     {
-        char files[10][50] =
+        char types[10][50] =
         {
-            "resources/equipment/martial melee weapons.txt",
-			"resources/equipment/martial ranged weapons.txt",
-			"resources/equipment/simple melee weapons.txt",
-			"resources/equipment/simple ranged weapons.txt",
+            "martial melee weapons",
+			"martial ranged weapons",
+			"simple melee weapons",
+			"simple ranged weapons",
         };
+        int nr_equipment = 0;
         for (int i = 0; i < 4; i++)
         {
-            std::ifstream fin(files[i]);
+            char file_name[50] = "resources/equipment/";
+            strcat(file_name, types[i]);
+            strcat(file_name, ".txt");
+            std::ifstream fin(file_name);
             char line[250];
             while (fin.get(line, 140))
             {
                 fin.get();
                 char* ptr = strtok(line, "#");
-                while (ptr != NULL)
+                int index = 0;
+                available_equipment[nr_equipment].SetAtributeType(types[i]);
+                while (ptr != NULL) // cat timp linia are atribute de citit
                 {
-					std::cout << ptr << std::endl;
+                    switch (index) // in functie de index sunt completate atributele echipamentului (in fisier sunt puse mereu in aceeasi ordine pt usurinta)
+                    {
+                    case 0: 
+                    {
+                        available_equipment[nr_equipment].SetAtributeName(ptr);
+                        break;
+                    }
+                    case 1:
+                    {
+                        available_equipment[nr_equipment].SetCurrencyValue(ptr);
+                        break;
+                    }
+                    case 2:
+                    {
+                        available_equipment[nr_equipment].SetDamage(ptr);
+                        break;
+                    }
+                    case 3:
+                    {
+                        available_equipment[nr_equipment].SetWeight(ptr);
+                        break;
+                    }
+                    case 4:
+                    {
+                        available_equipment[nr_equipment].SetAtributeDescription(ptr);
+                        break;
+                    }
+                    default:
+                        break;
+                    }
+                    index++;
                     ptr = strtok(NULL, "#");
                 }
+                nr_equipment++;
             }
             fin.close();
         }
+        total_equipment = nr_equipment;
     }
 
 }
