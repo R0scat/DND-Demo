@@ -23,8 +23,8 @@ public:
 	Race(std::string name, std::string description);
 	Race(const Race& RaceObj);
 	~Race();
-	std::string GetName();
-	std::string GetDescription();
+	std::string GetName() const;
+	std::string GetDescription() const;
 	void SetName(std::string name);
 	void SetDescription(std::string description);
 	void ShowRaceDetails();

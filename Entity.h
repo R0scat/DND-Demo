@@ -10,11 +10,11 @@ public:
 	Entity(int health);			 // constructor cu parametrii
 	Entity(const Entity& obj);   //constructor de copiere
 	~Entity();					 // desctructor
-	void getHealth();			 // getter pt HP
-	void setHealth(int health);  // setter pt HP
+	void GetHealth() const;			 // getter pt HP
+	void SetHealth(int health);  // setter pt HP
 
 protected:
-	int healthPoints;
+	int m_health_points;
 };
 
 #endif // !ENTITY_H

@@ -2,23 +2,27 @@
 
 using namespace std;
 
-Entity::Entity() {
+Entity::Entity() 
+{
 	//cout << "Created Entity!" << endl;
 }
 
-Entity::~Entity() {
+Entity::~Entity() 
+{
 	//cout << "Destroyed Entity!" << endl;
 }
 
-Entity::Entity(int health) {
-	this->healthPoints = health;
+Entity::Entity(int health)
+{
+	this->m_health_points = health;
 	cout << "Created Entity with " << health << " HP!" << endl;
 }
 
-void Entity::getHealth() {
-	cout << "Health: " << healthPoints << endl;
+void Entity::GetHealth() const
+{
+	cout << "Health: " << m_health_points << endl;
 }
 
-void Entity::setHealth(int health) {
-	healthPoints = health;
+void Entity::SetHealth(int health) {
+	m_health_points = health;
 }

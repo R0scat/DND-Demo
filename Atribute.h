@@ -10,7 +10,7 @@ protected:
 	std::string m_type; // is it an atribute from a class? for a race? archetype?
 	std::string m_name; // atribute name
 	std::string m_description; // atribute description
-	int m_level; // level at which the atribute is available
+	//int m_level; // level at which the atribute is available
 public:
 	Atribute();
 	Atribute(std::string type, std::string name, std::string description, int level);
@@ -19,11 +19,9 @@ public:
 	void SetAtributeType(std::string type);
 	void SetAtributeName(std::string name);
 	void SetAtributeDescription(std::string description);
-	void SetAtributeLevel(int level);
-	std::string GetAtributeType();
-	std::string GetAtributeName();
-	std::string GetAtributeDescription();
-	int GetAtributeLevel();
+	std::string GetAtributeType() const;
+	std::string GetAtributeName() const;
+	std::string GetAtributeDescription() const;
 };
 
 #endif // !ATRIBUTE_H

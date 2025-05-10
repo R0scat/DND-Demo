@@ -34,22 +34,22 @@ Class::Class(const Class& obj)
 Class::~Class() {}
 
 
-std::string Class::GetName()
+std::string Class::GetName() const
 {
 	return this->m_name;
 }
 
-std::string Class::GetHitDice()
+std::string Class::GetHitDice() const
 {
 	return this->m_hit_dice;
 }
 
-std::string Class::GetDescription()
+std::string Class::GetDescription() const
 {
 	return this->m_description;
 }
 
-int Class::GetLevel()
+int Class::GetLevel() const
 {
 	return this->m_class_level;
 }

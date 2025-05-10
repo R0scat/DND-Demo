@@ -83,11 +83,11 @@ public:
 	PlayerCharacter(const PlayerCharacter& PC);
 	~PlayerCharacter();
 	// gettere
-	std::string GetPlayerName();
-	std::string GetCharacterName();
-	Class GetSpecificCharacterClass(int pos);
-	Race GetCharacterRace();
-	int GetNumberOfClasses();
+	std::string GetPlayerName() const;
+	std::string GetCharacterName() const;
+	Class GetSpecificCharacterClass(int pos) const;
+	Race GetCharacterRace() const;
+	int GetNumberOfClasses() const;
 	void ShowAllCharacterClasses();
 	// settere
 	void SetPlayerName(std::string name);

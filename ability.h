@@ -9,9 +9,12 @@
 // clasa folosita mai mult pt a putea echipa abilitatea in functie de level-ul personajului
 class Ability: public Atribute, public IEquippable // interfata pt toate efectele pe care le poate avea un pc / any living creature
 {
+	int m_level;
 public:
-	void Equip(Entity* enitty) override;
-	void Unequip(Entity* enitty) override;
+	void Equip(Class* enitty) override;
+	void Unequip(Class* enitty) override;
+	void SetAbilityLevel(int level);
+	int GetAbilityLevel() const;
 };
 
 

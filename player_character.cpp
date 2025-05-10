@@ -53,29 +53,29 @@ PlayerCharacter::~PlayerCharacter()
 		std::cout << "oh well ...";
 }
 
-std::string PlayerCharacter::GetPlayerName()
+std::string PlayerCharacter::GetPlayerName() const
 {
 	return this->m_player_name;
 }
 
 
-std::string PlayerCharacter::GetCharacterName()
+std::string PlayerCharacter::GetCharacterName() const
 {
 	return this->m_character_name;
 }
 
 
-Race PlayerCharacter::GetCharacterRace()
+Race PlayerCharacter::GetCharacterRace() const
 {
 	return this->m_character_race;
 }
 
-Class PlayerCharacter::GetSpecificCharacterClass(int pos)
+Class PlayerCharacter::GetSpecificCharacterClass(int pos) const
 {
 	return this->m_character_class[pos];
 }
 
-int PlayerCharacter::GetNumberOfClasses()
+int PlayerCharacter::GetNumberOfClasses() const
 {
 	return this->m_nr_classes;
 }

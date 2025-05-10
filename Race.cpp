@@ -21,12 +21,12 @@ Race::Race(const Race& RaceObj)
 
 Race:: ~Race() {}
 
-std::string Race::GetName()
+std::string Race::GetName() const
 {
 	return this->m_name;
 }
 
-std::string Race::GetDescription()
+std::string Race::GetDescription() const
 {
 	return this->m_description;
 }

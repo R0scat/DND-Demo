@@ -35,17 +35,17 @@ void Equipment::SetWeight(std::string weight)
 //	return this->m_damage_dice;
 //}
 
-const std::string Equipment::GetDamage()
+const std::string Equipment::GetDamage() const
 {
 	return this->m_damage;
 }
 
-const std::string Equipment::GetCurrencyValue()
+const std::string Equipment::GetCurrencyValue() const
 {
 	return this->m_value;
 }
 
-const std::string Equipment::GetWeight()
+const std::string Equipment::GetWeight() const
 {
 	return this->m_weight;
 }
@@ -64,7 +64,7 @@ std::ostream& operator<<(std::ostream& os, const Equipment& equipment)
 {
 	os << "Name: " << equipment.m_name << "\n";
 	os << "Description: " << equipment.m_description << "\n";
-	os << "Level: " << equipment.m_level << "\n";
+	//os << "Level: " << equipment.m_level << "\n";
 	os << "Damage: " << equipment.m_damage << "\n";
 	os << "Value: " << equipment.m_value << "\n";
 	os << "Weight: " << equipment.m_weight << "\n";

@@ -60,10 +60,10 @@ public:
 	Class(std::string name, std::string hitDice, std::string description, int classLevel);   // constructor parametrii OBS: nu sunt citite proficiency-urile, asta se va face doar printr-o metoda separata
 	Class(const Class& obj);											     // constructor copiere
 	~Class();															     // destructor
-	std::string GetName();												     // getter nume -> returneaza numele
-	std::string GetHitDice();											     // getter hd ---> returneaza hit dice-ul
-	std::string GetDescription();										     // getter desc -> returneaza desc
-	int GetLevel();														     // getter lvl --> returneaza level-ul
+	std::string GetName() const;												     // getter nume -> returneaza numele
+	std::string GetHitDice() const;											     // getter hd ---> returneaza hit dice-ul
+	std::string GetDescription() const;										     // getter desc -> returneaza desc
+	int GetLevel() const;														     // getter lvl --> returneaza level-ul
 	void SetName(std::string name);										     // setter nume
 	void SetHitDice(std::string hitDice);								     // setter hd
 	void SetDescription(std::string description);						     // setter desc
