@@ -9,7 +9,7 @@
 
 // obs: oriced echipament poate fi folosit la orice level atata timp cat personajul are proficiency cu tipul de echipament
 class Equipment : public Atribute, public IEquippable {
-private:
+protected:
 	std::string m_damage; // dice for damage (1d6, 1d4 etc.) + type of damage (slashing, piercing, bludgeoning)
 	std::string m_value;
 	std::string m_weight; // in pounds bc thats what dnd uses

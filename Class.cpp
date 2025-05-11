@@ -147,3 +147,15 @@ void Class::DeleteLastProficiency()
 	this->m_last_prf = current; // mut ultimul nod la penultimul
 	delete current->next;
 }
+//
+//void Class::ChangeAvailableEquip()
+//{
+//	Equipment test;
+//	test.SetDamage("3 d8");
+//	m_available_equipment[0] = test;
+//}
+//
+//void Class::ShowAvailableEquip()
+//{
+//	std::cout << m_available_equipment[0];
+//}

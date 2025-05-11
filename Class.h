@@ -48,12 +48,14 @@ struct ClassBonus
 };
 
 class Class {
+
 	std::string m_name;
 	std::string m_hit_dice;
 	std::string m_description;
 	int m_class_level;
 	Proficiency* m_first_prf;
 	Proficiency* m_last_prf;
+	//static Equipment m_available_equipment[40];
 
 public:
 	Class();															     // constructor simplu clasa

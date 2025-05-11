@@ -58,7 +58,6 @@ static void PlayerMode() {
         std::cin >> option_int;
         Dnd_Helper::MenuPicker(option_int, ongoing, pc);
     }
-
 }
 
 
@@ -67,12 +66,12 @@ int main()
     //PlayerMode();
 
     //Atribute_Helper::ReadAtributes(); // currently testing getting atributes for a rando class !!
-    Equipment available_equipment[40];
-    int total_equipment;
-    Atribute_Helper::ReadEquipment(available_equipment, total_equipment); // testing file reading function nr.2
-    std::cout << "======================TESTING===========================\n";
-    for (int i = 0; i < total_equipment; i++)
-    {
-		std::cout << available_equipment[i] << std::endl;
-    }
+  //  Equipment available_equipment[40];
+  //  int total_equipment;
+  //  Atribute_Helper::ReadEquipment(available_equipment, total_equipment); // testing file reading function nr.2
+  //  std::cout << "======================TESTING===========================\n";
+  //  for (int i = 0; i < total_equipment; i++)
+  //  {
+		//std::cout << available_equipment[i] << std::endl;
+  //  }
 }
