@@ -3,36 +3,26 @@
 #define CLASS_H
 
 #include <string>
+#include "equipment.h"
+#include <vector>
 //#include "player_character.h"
 
-struct SpellAtributes { // for spellcasting classes, will be calculated from stats 
-	int spell_save_dc;
-	int spell_attack_bonus;
-	int number_of_spells;
-};
-
-struct SpellSlots { // keeps track of the number of spell slots available for each level FOR THE CURRENT CHARAXTER (aka determined by class level)
-	int first_lvl;
-	int second_lvl;
-	int third_lvl;
-	int fourth_lvl;
-	int fifth_lvl;
-	int sixth_lvl;
-	int seventh_lvl;
-	int eighth_lvl;
-	int ninth_lvl;
-};
-
-//struct Proficiencies
-//{ // given by chosen class
-//	// true or false for most of these except the tools since the theyre actual objects not a specific type of thing
-//	bool lightArmor;
-//	bool mediumArmor;
-//	bool heavyArmor;
-//	bool shields;
-//	bool simpleWeapons;
-//	bool martialWeapons;
-//	std::string tools;
+//struct SpellAtributes { // for spellcasting classes, will be calculated from stats 
+//	int spell_save_dc;
+//	int spell_attack_bonus;
+//	int number_of_spells;
+//};
+//
+//struct SpellSlots { // keeps track of the number of spell slots available for each level FOR THE CURRENT CHARAXTER (aka determined by class level)
+//	int first_lvl;
+//	int second_lvl;
+//	int third_lvl;
+//	int fourth_lvl;
+//	int fifth_lvl;
+//	int sixth_lvl;
+//	int seventh_lvl;
+//	int eighth_lvl;
+//	int ninth_lvl;
 //};
 
 // lista dinamica de proficiencies (fiind mai multe si diferite in functie de clasa e mai bine decat sa aloc un anumit numar lowk random)
@@ -42,20 +32,26 @@ struct Proficiency
 	Proficiency* next;
 };
 
-struct ClassBonus
+
+struct EquippedItem
 {
-	
+	Equipment item;
+	EquippedItem* next;
 };
 
 class Class {
-
+protected:
 	std::string m_name;
 	std::string m_hit_dice;
 	std::string m_description;
 	int m_class_level;
 	Proficiency* m_first_prf;
 	Proficiency* m_last_prf;
-	//static Equipment m_available_equipment[40];
+	EquippedItem* m_first_equipped;
+	EquippedItem* m_last_equipped;
+	//static Equipment m_available_equipment[100];
+	static std::vector<Equipment> m_available_equipment;
+	static int m_total_equipment;
 
 public:
 	Class();															     // constructor simplu clasa
@@ -77,7 +73,16 @@ public:
 	void ShowProficiencies();
 	void DeleteFirstProficiency();
 	void DeleteLastProficiency();
+	// functii pt echipament (lista dinamica)
+	void AddEquipment(Equipment item);
+	void ShowEquipment();
+	void DeleteFirstEquippedItem();
+	void DeleteLastEquippedItem();
+	// functii pt variabila statica m_available_equipment
+	static void SetAvailableEquipment(Equipment array[100], int nr_elements);
+	static std::vector<Equipment> GetAvailableEquipment();
+	static void ShowAllAvailableEquipment();
+	static Equipment GetSpecificAvailableEquipment(int contor);
 };
-
 
 #endif // !CLASS_H

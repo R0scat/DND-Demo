@@ -10,10 +10,12 @@
 #include "player_character.h"
 #include <cstring>
 #include "equipment.h"
+#include <vector>
 //#include <regex>
 
 namespace Atribute_Helper
 {
+
     inline int UpdateCurrentAtribute(int current_class_atribute, std::string line)
     {
         if (line == "// proficiencies")
@@ -34,60 +36,21 @@ namespace Atribute_Helper
         return current_class_atribute;
     }
 
-    inline void ReadAtributes()
-    {
-        char file_name[50] = "resources/class_abilities/paladin.txt";
-        std::ifstream fin(file_name);
-
-        std::string line;
-        Class given_class;
-        PlayerCharacter pc;
-        int current_class_atribute = 0;
-        // class atributes in this order in file: proficiency, equipment, abilities
-        
-        while (std::getline(fin, line)) // reading given file
-        {
-            std::cout << line << std::endl;
-			current_class_atribute = UpdateCurrentAtribute(current_class_atribute, line);
-
-            switch (current_class_atribute)
-            {
-            case 1:
-            {
-                if (line != "// proficiencies")
-                    given_class.AddProficiency(line);
-            }
-            case 2:
-            {
-                if (line != "// equipment")
-                    break;
-                //std::cout << current_class_atribute << "\n";
-            }
-            case 3:
-            {
-                if (line != "// abilities")
-                    break;
-                //std::cout << current_class_atribute << "\n";
-            }
-            
-            }
-            
-        }
-		pc.AddCharacterClass(given_class);
-        fin.close();
-    }
-
-    inline void ReadEquipment(Equipment available_equipment[40], int& total_equipment)
+    inline void ReadEquipment(Equipment available_equipment[100], int& total_equipment)
     {
         char types[10][50] =
         {
             "martial melee weapons",
-			"martial ranged weapons",
-			"simple melee weapons",
-			"simple ranged weapons",
+            "martial ranged weapons",
+            "simple melee weapons",
+            "simple ranged weapons",
+            "light armor",
+            "medium armor",
+            "heavy armor",
+            "shield"
         };
         int nr_equipment = 0;
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 8; i++)
         {
             char file_name[50] = "resources/equipment/";
             strcat(file_name, types[i]);
@@ -104,7 +67,7 @@ namespace Atribute_Helper
                 {
                     switch (index) // in functie de index sunt completate atributele echipamentului (in fisier sunt puse mereu in aceeasi ordine pt usurinta)
                     {
-                    case 0: 
+                    case 0:
                     {
                         available_equipment[nr_equipment].SetAtributeName(ptr);
                         break;
@@ -141,6 +104,91 @@ namespace Atribute_Helper
         }
         total_equipment = nr_equipment;
     }
+
+    inline void PopulateStaticAvailableEquipment()
+    {
+        Equipment array[100];
+        int total_equipment;
+        ReadEquipment(array, total_equipment);
+        Class::SetAvailableEquipment(array, total_equipment);
+        Class::ShowAllAvailableEquipment();
+    }
+    
+    inline int FindEquipmentContor(std::string line)
+    {
+        // fac codul mai citibil asa ca o sa copiez vectorul static de echipament intr-unul temporar din scope-ul asta
+        std::vector<Equipment> temp = Class::GetAvailableEquipment();
+        for (int i = 0; i < temp.size(); i++)
+        {
+            if (temp[i].GetAtributeName() == line)
+                return i;
+        }
+        //std::cout << "Echipamentul nu a fost gasit :P\n";
+        //std::cout << line << '\n';
+        return -1;
+    }
+
+    inline void ReadAtributes()
+    {
+        char file_name[50] = "resources/class_abilities/paladin.txt";
+        std::ifstream fin(file_name);
+
+        std::string line;
+        Class given_class;
+        PlayerCharacter pc;
+        int current_class_atribute = 0;
+        // class atributes in this order in file: proficiency, equipment, abilities
+        
+        while (std::getline(fin, line)) // reading given file
+        {
+            //std::cout << line << std::endl;
+			current_class_atribute = UpdateCurrentAtribute(current_class_atribute, line);
+
+            switch (current_class_atribute)
+            {
+            case 1:
+            {
+                if (line != "// proficiencies")
+                    given_class.AddProficiency(line);
+                break;
+            }
+            case 2:
+            {
+                if (line != "// equipment")
+                {
+                    int contor;
+                    contor = FindEquipmentContor(line);
+                    if (contor != -1)
+                        given_class.AddEquipment(Class::GetSpecificAvailableEquipment(contor));
+                    else
+                    {
+                        Equipment specific_class_equipment;
+                        specific_class_equipment.SetAtributeName(line);
+                        given_class.AddEquipment(specific_class_equipment);
+                    }
+
+                }
+                //std::cout << current_class_atribute << "\n";
+                break;
+            }
+            case 3:
+            {
+                if (line != "// abilities")
+                    break;
+                //std::cout << current_class_atribute << "\n";
+            }
+            
+            }
+            
+        }
+        std::cout << "\nshowing al prof:\n";
+        given_class.ShowProficiencies();
+        std::cout << "\nshowing all equip: \n";
+        given_class.ShowEquipment();
+		pc.AddCharacterClass(given_class);
+        fin.close();
+    }
+
 
 }
 

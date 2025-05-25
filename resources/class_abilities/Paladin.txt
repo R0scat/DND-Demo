@@ -7,7 +7,7 @@ simple weapons
 martial weapons
 // equipment
 shortsword
-wooden shield
+shield
 light hammer
 chain mail
 holy symbol

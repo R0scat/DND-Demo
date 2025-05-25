@@ -1,4 +1,4 @@
-#include "Equipment.h"
+#include "equipment.h"
 
 //void Equipment::SetDamageType(std::string damage_type)
 //{
@@ -50,12 +50,12 @@ const std::string Equipment::GetWeight() const
 	return this->m_weight;
 }
 
-void Equipment::Equip(Class* entity)
+void Equipment::Equip(Entity* entity)
 {
 
 }
 
-void Equipment::Unequip(Class* entity)
+void Equipment::Unequip(Entity* entity)
 {
 
 }
@@ -65,7 +65,7 @@ std::ostream& operator<<(std::ostream& os, const Equipment& equipment)
 	os << "Name: " << equipment.m_name << "\n";
 	os << "Description: " << equipment.m_description << "\n";
 	//os << "Level: " << equipment.m_level << "\n";
-	os << "Damage: " << equipment.m_damage << "\n";
+	os << "Damage/ AC: " << equipment.m_damage << "\n";
 	os << "Value: " << equipment.m_value << "\n";
 	os << "Weight: " << equipment.m_weight << "\n";
 	os << "Type: " << equipment.m_type << "\n";

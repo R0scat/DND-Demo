@@ -1,15 +1,15 @@
 #include "ability.h"
 #include "class.h"
-
-void Ability::Equip(Class* entity)
-{
-
-}
-
-void Ability::Unequip(Class* entity)
-{
-
-}
+//
+//void Ability::Equip(Class entity)
+//{
+//
+//}
+//
+//void Ability::Unequip(Class entity)
+//{
+//
+//}
 
 void Ability::SetAbilityLevel(int level)
 {

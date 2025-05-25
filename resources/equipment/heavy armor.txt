@@ -1,0 +1,4 @@
+ring mail#30 gp#14#40 lb.#disadvantage
+chain mail#75 gp#16 (Str 13)#55 lb.#disadvantage
+splint#200 gp#17 (Str 15)#60 lb.#disadvantage
+plate#1,500 gp#18 (Str 15)#65 lb.#disadvantage

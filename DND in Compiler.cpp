@@ -6,6 +6,7 @@
 #include "class.h"
 #include "race.h"
 #include "player_character.h"
+#include <vector>
 
 static void PlayerMode() {
     int option_int, lvl, ongoing = 1;
@@ -66,6 +67,10 @@ int main()
     //PlayerMode();
 
     //Atribute_Helper::ReadAtributes(); // currently testing getting atributes for a rando class !!
+    
+    Atribute_Helper::PopulateStaticAvailableEquipment();
+    Atribute_Helper::ReadAtributes();
+
   //  Equipment available_equipment[40];
   //  int total_equipment;
   //  Atribute_Helper::ReadEquipment(available_equipment, total_equipment); // testing file reading function nr.2

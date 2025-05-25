@@ -1,0 +1,5 @@
+hide#10 gp#12 + Dex modifier (max 2)#12 lb.#none
+chain shirt#50 gp#13 + Dex modifier (max 2)#20 lb.#none
+scale mail#50 gp#14 + Dex modifier (max 2)#45 lb.#disadvantage
+breastplate#400 gp#14 + Dex modifier (max 2)#20 lb.#none
+half plate#750 gp#15 + Dex modifier (max 2)#40 lb.#disadvantage

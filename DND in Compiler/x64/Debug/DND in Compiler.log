@@ -1,13 +1,5 @@
-﻿  ability.cpp
-  class.cpp
-  DND in Compiler.cpp
-C:\Users\maiar\Documents\An1\Semestrul 2\POO\DND in Compiler\dnd_helper.h(120,13): warning C4101: 'lvl': unreferenced local variable
+﻿  DND in Compiler.cpp
+C:\Users\maiar\Documents\An1\Semestrul2\POO\DND in Compiler\dnd_helper.h(120,13): warning C4101: 'lvl': unreferenced local variable
   (compiling source file 'DND%20in%20Compiler.cpp')
   
-  equipment.cpp
-  player_character.cpp
-C:\Users\maiar\Documents\An1\Semestrul 2\POO\DND in Compiler\dnd_helper.h(120,13): warning C4101: 'lvl': unreferenced local variable
-  (compiling source file 'player_character.cpp')
-  
-  Generating Code...
-  DND in Compiler.vcxproj -> C:\Users\maiar\Documents\An1\Semestrul 2\POO\DND in Compiler\x64\Debug\DND in Compiler.exe
+  DND in Compiler.vcxproj -> C:\Users\maiar\Documents\An1\Semestrul2\POO\DND in Compiler\x64\Debug\DND in Compiler.exe

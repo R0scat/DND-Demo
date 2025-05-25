@@ -145,7 +145,6 @@
     <ClInclude Include="entity.h" />
     <ClInclude Include="equipment.h" />
     <ClInclude Include="ieffect.h" />
-    <ClInclude Include="iequippable.h" />
     <ClInclude Include="player_character.h" />
     <ClInclude Include="race.h" />
   </ItemGroup>
