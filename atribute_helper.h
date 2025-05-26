@@ -168,7 +168,7 @@ namespace Atribute_Helper
         }
     }
 
-    inline void ReadAtributes(Class& given_class, PlayerCharacter& pc)
+    inline void ReadAtributes(Class& given_class/*, PlayerCharacter& pc*/)
     {
         std::string file_name = "resources/class_abilities/";
         file_name = file_name + given_class.GetName();
@@ -257,7 +257,7 @@ namespace Atribute_Helper
         //std::cout << "------------------------\n";
         //given_class.ShowAbilities();
 
-		pc.AddCharacterClass(given_class);
+		//pc.AddCharacterClass(given_class);
         fin.close();
     }
 

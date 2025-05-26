@@ -85,7 +85,7 @@ public:
 	// gettere
 	std::string GetPlayerName() const;
 	std::string GetCharacterName() const;
-	Class GetSpecificCharacterClass(int pos) const;
+	Class GetSpecificCharacterClass(int pos) const; // de la 0 btw
 	Race GetCharacterRace() const;
 	int GetNumberOfClasses() const;
 	void ShowAllCharacterClasses();

@@ -172,7 +172,7 @@ void Class::AddEquipment(Equipment item)
 void Class::ShowEquipment()
 {
 	EquippedItem* current = this->m_first_equipped;
-	while (current != NULL)
+	while (current != nullptr)
 	{
 		std::cout << current->item << std::endl;
 		current = current->next;

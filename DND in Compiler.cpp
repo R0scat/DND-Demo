@@ -21,11 +21,12 @@ static void PlayerMode() {
 
     std::cout << "Now, let's start by picking your class, race and level!\n";
     Dnd_Helper::PickClassMessage(); // includes telling the user to pick their class + level!!!!
-    //std::cin >> optionString;
     std::cin.getline(option_string, 51);
-	//std::cout << optionString << std::endl;  // linie de debug
     option_int = Dnd_Helper::ParseMessage(option_string, 1); // pt clasa parseaza cu 1; pt rasa cu 2
     chosen_class = Dnd_Helper::PickClass(option_int); // functie din namespace dndHelper facuta sa ajute utilizatorul la alegerea claseo
+
+    // pt a include toate abilitatile primei clase alese (abilitati luate din fisiere .txt)
+    Atribute_Helper::ReadAtributes(chosen_class);
 
     // pt alegerea lvl-ului
     std::cout << "Now, choose your level (reminder: unless multi-classing, your character can be at most lvl 20)\n";
@@ -61,20 +62,15 @@ static void PlayerMode() {
     }
 }
 
-
-int main()
+static void Debug()
 {
-    //PlayerMode();
-
-    //Atribute_Helper::ReadAtributes(); // currently testing getting atributes for a rando class !!
-    
     Class test_class;
     PlayerCharacter test_pc;
 
-    test_class.SetName("barbarian");
+    test_class.SetName("bard");
 
     Atribute_Helper::PopulateStaticAvailableEquipment();
-    Atribute_Helper::ReadAtributes(test_class, test_pc);
+    Atribute_Helper::ReadAtributes(test_class/*, test_pc*/);
 
     std::cout << "showing abilities: \n";
     test_class.ShowAbilities();
@@ -82,6 +78,17 @@ int main()
     test_class.ShowProficiencies();
     std::cout << "\nshowing equipment: \n";
     test_class.ShowEquipment();
+}
+
+
+int main()
+{
+    Atribute_Helper::PopulateStaticAvailableEquipment();
+    PlayerMode();
+
+    //Atribute_Helper::ReadAtributes(); // currently testing getting atributes for a rando class !!
+    
+    //Debug();
 
   //  Equipment available_equipment[40];
   //  int total_equipment;

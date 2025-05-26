@@ -1,5 +1,4 @@
-﻿  DND in Compiler.cpp
-C:\Users\maiar\Documents\An1\Semestrul2\POO\DND in Compiler\dnd_helper.h(120,13): warning C4101: 'lvl': unreferenced local variable
-  (compiling source file 'DND%20in%20Compiler.cpp')
-  
+﻿  atribute.cpp
+  class.cpp
+  Generating Code...
   DND in Compiler.vcxproj -> C:\Users\maiar\Documents\An1\Semestrul2\POO\DND in Compiler\x64\Debug\DND in Compiler.exe

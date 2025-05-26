@@ -8,6 +8,8 @@
 #include "class.h"
 #include "race.h"
 #include "player_character.h"
+#include "ability.h"
+#include "equipment.h"
 
 namespace Dnd_Helper {
     inline void ClearScreen()
@@ -318,11 +320,11 @@ namespace Dnd_Helper {
     inline void Menu()
     {
         std::cout << "Your character basics have all been set up, what would you like to do?\n";
-        std::cout << "1. show character details\n";
+        std::cout << "1. show basic character details\n";
         std::cout << "2. add another class\n";
-        std::cout << "3. add equipment\n";
-        std::cout << "4. add backstory\n";
-        std::cout << "5. pick abilities (available at current level)\n";
+        std::cout << "3. show equipment\n";
+        std::cout << "4. show abilities\n";
+        std::cout << "5. show proficiencies\n";
         std::cout << "6. level up\n";
         std::cout << "7. change character stats (e.g. strenght, charisma ...)\n";
         std::cout << "8. change ability proficiencies (e.g. arcana, history, perception ...)\n";
@@ -335,6 +337,13 @@ namespace Dnd_Helper {
         int option_int;
         Class chosen_class;
         Dnd_Helper::ClearScreen();
+
+        // debug
+        Class first_class;
+        first_class = pc.GetSpecificCharacterClass(0);
+        // debug
+
+
 		switch (option)
 		{
 		case 1:
@@ -358,14 +367,21 @@ namespace Dnd_Helper {
             break;
         }
 		case 3:
-			std::cout << "Adding equipment...\n\n";
-			break;
+			std::cout << "Showing all equipment:\n";
+            // currently only showing for the first class tho
+            first_class.ShowEquipment();
+            break;
 		case 4:
-			std::cout << "Adding backstory...\n\n";
-			break;
+			std::cout << "Showing all abilities:\n";
+            // currently only showing for first class + not caring about level
+            first_class.ShowAbilities();
+            break;
 		case 5:
-			std::cout << "Picking abilities...\n\n";
-			break;
+			std::cout << "Showing all proficiencies: \n";
+            // for the first class only rn
+            first_class.ShowProficiencies();
+            //first_class.ShowProficiencies();
+            break;
 		case 6:
         {
             int class_nr;
