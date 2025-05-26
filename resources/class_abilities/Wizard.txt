@@ -1,0 +1,55 @@
+// proficiencies
+none (armor)
+daggers
+darts
+slings
+quarterstaffs
+light crossbows
+none (tools)
+intelligence saves
+wisdom saves
+choose 2: arcana, history, insight, investigation, medicine, religion
+// equipment
+quarterstaff
+dagger
+component pouch
+arcane focus 
+scholar's pack
+spellbook
+// abilities
+Spellcasting  
+1
+As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power.  
+You know three wizard cantrips of your choice. You learn more as you level up (see Cantrips Known on the Wizard table).  
+You have a spellbook with six 1st-level wizard spells of your choice. These spells represent your research and discoveries.  
+You can find and copy new spells into your spellbook, spending 2 hours and 50 gp per spell level.  
+Copying from your own spellbook takes 1 hour and 10 gp per level.  
+Losing your spellbook requires you to find or recreate its contents.  
+Your spellbook’s appearance is unique and may reflect your personality or origin.  
+You prepare spells from your spellbook equal to your Intelligence modifier + your wizard level (min 1). Spell save DC = 8 + your proficiency bonus + your Intelligence modifier. Spell attack modifier = your proficiency bonus + your Intelligence modifier. You can use an arcane focus as your spellcasting focus. You can cast wizard spells with the ritual tag as rituals, even if they’re not prepared. You gain two new wizard spells of your choice each time you level up.  
+~
+Arcane Recovery  
+1
+Once per day when you finish a short rest, you can recover spell slots equal to half your wizard level (rounded up). None of the slots can be 6th level or higher. Example: As a 4th-level wizard, you can recover two 1st-level slots or one 2nd-level slot.  
+~
+Arcane Tradition (Class Archetype)  
+2
+At 2nd level, you choose an arcane tradition. Your choice grants features at 2nd, 6th, 10th, and 14th level. Available Traditions: Abjuration (PHB), Bladesinging (SCAG, TCoE), Chronurgy (EGW)
+, Conjuration (PHB), Divination (PHB), Enchantment (PHB), Evocation (PHB), Graviturgy (EGW), Illusion (PHB), Necromancy (PHB), Order of Scribes (TCoE), Transmutation (PHB), War Magic (XGtE), Runecrafter (UA 83), Artificer (UA 1), Invention (UA 46), Lore Mastery (UA 29), Mage of Lorehold (UA 79), Mage of Prismari (UA 79), Mage of Quandrix (UA 79), Mage of Silverquill (UA 79), Onomancy (UA 63), Order of Scribes (UA 72), Psionics (UA 66), Technomancy (UA 7), Theurgy (UA 33)  
+~
+Cantrip Formulas (Optional)  
+3
+At 3rd level, you can replace one wizard cantrip you know with another from the wizard list when you finish a long rest. You must consult the arcane formulas in your spellbook to do so.  
+~
+Ability Score Improvement  
+4
+When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score by 2, or two ability scores by 1. As normal, you can’t raise a score above 20 using this feature.  
+~
+Spell Mastery  
+18
+You can cast a 1st-level and a 2nd-level wizard spell at will, if you have them prepared. You must still use spell slots to cast them at higher levels. You can replace these chosen spells after 8 hours of study.  
+~
+Signature Spells  
+20
+Choose two 3rd-level wizard spells in your spellbook. These are always prepared and don’t count against your total. You can cast each one once at 3rd level without expending a spell slot. You regain these uses after a short or long rest. You can still cast them at higher levels using spell slots.  
+~

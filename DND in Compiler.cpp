@@ -71,7 +71,7 @@ int main()
     Class test_class;
     PlayerCharacter test_pc;
 
-    test_class.SetName("paladin");
+    test_class.SetName("barbarian");
 
     Atribute_Helper::PopulateStaticAvailableEquipment();
     Atribute_Helper::ReadAtributes(test_class, test_pc);
@@ -80,7 +80,7 @@ int main()
     test_class.ShowAbilities();
     std::cout << "showing proficiencies: \n";
     test_class.ShowProficiencies();
-    std::cout << "showing equipment: \n";
+    std::cout << "\nshowing equipment: \n";
     test_class.ShowEquipment();
 
   //  Equipment available_equipment[40];

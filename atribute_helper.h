@@ -170,8 +170,10 @@ namespace Atribute_Helper
 
     inline void ReadAtributes(Class& given_class, PlayerCharacter& pc)
     {
-        char file_name[50] = "resources/class_abilities/paladin.txt";
-        // TB MODIFICAT PT TOATE CLASELE NU DOAR PT PALADIN !!
+        std::string file_name = "resources/class_abilities/";
+        file_name = file_name + given_class.GetName();
+        file_name = file_name + ".txt";
+        std::cout << file_name << "\n";
         std::ifstream fin(file_name);
 
         std::string line;

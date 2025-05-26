@@ -125,21 +125,21 @@ namespace Dnd_Helper {
 
         case 1: // paladin
         {
-            chosen_class.SetName("Paladin");
+            chosen_class.SetName("paladin");
             chosen_class.SetHitDice("1d10");
             chosen_class.SetDescription("A holy warrior bound to a sacred oath");
             break;
         }
         case 2: // wizard 
         {
-            chosen_class.SetName("Wizard");
+            chosen_class.SetName("wizard");
             chosen_class.SetHitDice("1d6");
             chosen_class.SetDescription("A scholarly magic-user capable of manipulating reality");
             break;
         }
         case 3: // rogue
         {
-            chosen_class.SetName("Rogue");
+            chosen_class.SetName("rogue");
             chosen_class.SetHitDice("1d8");
             chosen_class.SetDescription("A scoundrel who uses stealth and trickery to overcome obstacles and enemies");
             break;
@@ -147,7 +147,7 @@ namespace Dnd_Helper {
         }
         case 4: // sorcerer
         {
-            chosen_class.SetName("Sorcerer");
+            chosen_class.SetName("sorcerer");
             chosen_class.SetHitDice("1d6");
             chosen_class.SetDescription("A spellcaster who draws on inherent magic from a gift or bloodline");
             break;
@@ -155,56 +155,56 @@ namespace Dnd_Helper {
         }
         case 5: // druid 
         {
-            chosen_class.SetName("Druid");
+            chosen_class.SetName("druid");
             chosen_class.SetHitDice("1d8");
             chosen_class.SetDescription("A priest of the Old Faith, wielding the powers of nature and adopting animal forms");
             break;
         }
         case 6: // warlock
         {
-            chosen_class.SetName("Warlock");
+            chosen_class.SetName("warlock");
             chosen_class.SetHitDice("1d8");
             chosen_class.SetDescription("A wielder of magic that is derived from a bargain with an extraplanar entity");
             break;
         }
         case 7: // fighter
         {
-            chosen_class.SetName("Fighter");
+            chosen_class.SetName("fighter");
             chosen_class.SetHitDice("1d10");
             chosen_class.SetDescription("A master of martial combat, skilled with a variety of weapons and armor");
             break;
         }
         case 8: // barbarian
         {
-            chosen_class.SetName("Barbarian");
+            chosen_class.SetName("barbarian");
             chosen_class.SetHitDice("1d12");
             chosen_class.SetDescription("A fierce warrior of primitive background who can enter a battle rage");
             break;
         }
         case 9: // artificer
         {
-            chosen_class.SetName("Artificer");
+            chosen_class.SetName("artificer");
             chosen_class.SetHitDice("1d8");
             chosen_class.SetDescription("A master of invention, artificers use ingenuity and magic to unlock extraordinary capabilities in objects");
             break;
         }
         case 10: // cleric
         {
-            chosen_class.SetName("Cleric");
+            chosen_class.SetName("cleric");
             chosen_class.SetHitDice("1d8");
             chosen_class.SetDescription("A priestly champion who wields divine magic in service of a higher power");
             break;
         }
         case 11: // monk
         {
-            chosen_class.SetName("Monk");
+            chosen_class.SetName("monk");
             chosen_class.SetHitDice("1d8");
             chosen_class.SetDescription("A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection");
             break;
         }
         case 12: // bard
         {
-            chosen_class.SetName("Bard");
+            chosen_class.SetName("bard");
             chosen_class.SetHitDice("1d8");
             chosen_class.SetDescription("An inspiring magician whose power echoes the music of creation");
             break;
