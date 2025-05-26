@@ -27,6 +27,14 @@ static void PlayerMode() {
 
     // pt a include toate abilitatile primei clase alese (abilitati luate din fisiere .txt)
     Atribute_Helper::ReadAtributes(chosen_class);
+    // debug
+    /*std::cout << "show abilities\n";
+    chosen_class.ShowAbilities();
+    std::cout << "show equipment\n";
+    chosen_class.ShowEquipment();
+    std::cout << "show proficiencies\n";
+    chosen_class.ShowProficiencies();*/
+    // debug
 
     // pt alegerea lvl-ului
     std::cout << "Now, choose your level (reminder: unless multi-classing, your character can be at most lvl 20)\n";
@@ -47,6 +55,20 @@ static void PlayerMode() {
 	std::getline(std::cin, character_name); // aici se ia numele personajului
 
     PlayerCharacter pc(username, character_name, chosen_class, chosen_race); // aici se construieste in sine Player Character-ul
+
+    // debug
+    //std::cout << "show abilities\n";
+    //pc.GetSpecificCharacterClass(1).ShowAbilities();
+    //pc.AddFirstClass(chosen_class);
+    //pc.GetFirstClass().ShowAbilities();
+    //std::cout << "\nmiau\n";
+    /*pc.AddClassToVector(chosen_class);
+    pc.ReturnSpecificClass(0).ShowAbilities();
+    pc.ReturnSpecificClass(0).ShowClassDetails();*/
+    //std::cout << "\nmiau\n";
+    //chosen_class.ShowAbilities();
+    //chosen_class.ShowAbilities();
+    // debug
 
     std::cout << "Great! Your character currently looks like this:\n";
     pc.ShowPlayerCharacterDetails();

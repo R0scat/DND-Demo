@@ -367,17 +367,17 @@ namespace Dnd_Helper {
             break;
         }
 		case 3:
-			std::cout << "Showing all equipment:\n";
+			std::cout << "Showing all equipment:\n\n";
             // currently only showing for the first class tho
             first_class.ShowEquipment();
             break;
 		case 4:
-			std::cout << "Showing all abilities:\n";
+			std::cout << "Showing all abilities:\n\n";
             // currently only showing for first class + not caring about level
             first_class.ShowAbilities();
             break;
 		case 5:
-			std::cout << "Showing all proficiencies: \n";
+			std::cout << "Showing all proficiencies: \n\n";
             // for the first class only rn
             first_class.ShowProficiencies();
             //first_class.ShowProficiencies();

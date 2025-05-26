@@ -15,7 +15,7 @@ PlayerCharacter::PlayerCharacter() // constructor care creeaza un obiect cu valo
 	this->m_level = 0; // placeholder, teoretic n-are niciun nivel inca
 }
 
-PlayerCharacter::PlayerCharacter(std::string playerName, std::string characterName, Class firstChosenClass, Race characterRace)
+PlayerCharacter::PlayerCharacter(std::string playerName, std::string characterName, Class& firstChosenClass, Race characterRace)
 {
 	this->m_player_name = playerName;
 	this->m_character_name = characterName;
@@ -174,3 +174,25 @@ void PlayerCharacter::Remove()
 {
 
 }
+
+// debug
+
+//void PlayerCharacter::AddFirstClass(Class& de_adaugat)
+//{
+//	this->m_first_class = de_adaugat;
+//}
+//
+//Class PlayerCharacter::GetFirstClass()
+//{
+//	return this->m_first_class;
+//}
+//
+//void PlayerCharacter::AddClassToVector(Class de_adaugat)
+//{
+//	this->m_class_vector.push_back(de_adaugat);
+//}
+//
+//Class PlayerCharacter::ReturnSpecificClass(int pos)
+//{
+//	return this->m_class_vector[pos];
+//}

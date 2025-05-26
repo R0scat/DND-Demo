@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\equipment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:equipment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\class.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:class.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\dnd_helper.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:dnd_helper.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\DND in Compiler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:DND in Compiler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\equipment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:equipment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\atribute_helper.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -31,8 +23,24 @@
       "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:player_character.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\class.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:class.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\player_character.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:player_character.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\DND in Compiler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:DND in Compiler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\iequippable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:iequippable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\equipment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:equipment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\equipment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:equipment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\string||{3B902123-F8A7-4915-9F01-361F908088D0}|"
@@ -58,20 +66,12 @@
       "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\iequippable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:iequippable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\Race.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:Race.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\Race.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:Race.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\player_character.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|solutionrelative:player_character.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2E86FC5-B1D2-4292-BEC6-F768BF9580B0}|DND in Compiler.vcxproj|C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\Atribute.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -91,61 +91,38 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 262,
+          "DockedWidth": 185,
           "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "DND in Compiler.cpp",
               "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\DND in Compiler.cpp",
               "RelativeDocumentMoniker": "DND in Compiler.cpp",
               "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\DND in Compiler.cpp",
               "RelativeToolTip": "DND in Compiler.cpp",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAABcAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAGkAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-28T18:08:23.181Z"
+              "WhenOpened": "2025-03-28T18:08:23.181Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "class.cpp",
               "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\class.cpp",
               "RelativeDocumentMoniker": "class.cpp",
               "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\class.cpp",
               "RelativeToolTip": "class.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-28T21:58:01.052Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ability.h",
-              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\ability.h",
-              "RelativeDocumentMoniker": "ability.h",
-              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\ability.h",
-              "RelativeToolTip": "ability.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-29T14:22:31.72Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "equipment.h",
-              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\equipment.h",
-              "RelativeDocumentMoniker": "equipment.h",
-              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\equipment.h",
-              "RelativeToolTip": "equipment.h",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAEAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-28T11:44:43.347Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "entity.cpp",
               "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\entity.cpp",
               "RelativeDocumentMoniker": "entity.cpp",
@@ -157,7 +134,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 5,
+              "Title": "player_character.cpp",
+              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\player_character.cpp",
+              "RelativeDocumentMoniker": "player_character.cpp",
+              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\player_character.cpp",
+              "RelativeToolTip": "player_character.cpp",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAvwMMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-15T09:50:06.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "equipment.h",
+              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\equipment.h",
+              "RelativeDocumentMoniker": "equipment.h",
+              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\equipment.h",
+              "RelativeToolTip": "equipment.h",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-28T11:44:43.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ability.h",
+              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\ability.h",
+              "RelativeDocumentMoniker": "ability.h",
+              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\ability.h",
+              "RelativeToolTip": "ability.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-29T14:22:31.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "entity.h",
               "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\entity.h",
               "RelativeDocumentMoniker": "entity.h",
@@ -169,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "atribute.h",
               "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\atribute.h",
               "RelativeDocumentMoniker": "atribute.h",
@@ -182,18 +196,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "player_character.cpp",
-              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\player_character.cpp",
-              "RelativeDocumentMoniker": "player_character.cpp",
-              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\player_character.cpp",
-              "RelativeToolTip": "player_character.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-15T09:50:06.485Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
               "Title": "race.cpp",
               "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\race.cpp",
               "RelativeDocumentMoniker": "race.cpp",
@@ -230,24 +232,64 @@
           ]
         },
         {
-          "DockedWidth": 138,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 215,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "class.h",
+              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\class.h",
+              "RelativeDocumentMoniker": "class.h",
+              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\class.h",
+              "RelativeToolTip": "class.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-30T18:43:00.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "atribute_helper.h",
+              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\atribute_helper.h",
+              "RelativeDocumentMoniker": "atribute_helper.h",
+              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\atribute_helper.h",
+              "RelativeToolTip": "atribute_helper.h",
+              "ViewState": "AgIAACsAAAAAAAAAAAAgwP8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-28T09:55:39.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "player_character.h",
+              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\player_character.h",
+              "RelativeDocumentMoniker": "player_character.h",
+              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\player_character.h",
+              "RelativeToolTip": "player_character.h",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAtwHMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-15T09:54:34.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "dnd_helper.h",
               "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\dnd_helper.h",
               "RelativeDocumentMoniker": "dnd_helper.h",
               "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\dnd_helper.h",
               "RelativeToolTip": "dnd_helper.h",
-              "ViewState": "AgIAAGsBAAAAAAAAAAAAAHMBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAHsBAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-15T09:47:18.067Z"
+              "WhenOpened": "2025-04-15T09:47:18.067Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "equipment.cpp",
               "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\equipment.cpp",
               "RelativeDocumentMoniker": "equipment.cpp",
@@ -255,24 +297,11 @@
               "RelativeToolTip": "equipment.cpp",
               "ViewState": "AgIAADMAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-28T13:16:37.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T13:16:37.005Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "atribute_helper.h",
-              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\atribute_helper.h",
-              "RelativeDocumentMoniker": "atribute_helper.h",
-              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\atribute_helper.h",
-              "RelativeToolTip": "atribute_helper.h",
-              "ViewState": "AgIAAMoAAAAAAAAAAAAAAAMBAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-28T09:55:39.293Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 7,
               "Title": "iequippable.h",
               "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\iequippable.h",
               "RelativeDocumentMoniker": "iequippable.h",
@@ -284,31 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "player_character.h",
-              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\player_character.h",
-              "RelativeDocumentMoniker": "player_character.h",
-              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\player_character.h",
-              "RelativeToolTip": "player_character.h",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFcAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-15T09:54:34.876Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "class.h",
-              "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\class.h",
-              "RelativeDocumentMoniker": "class.h",
-              "ToolTip": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\class.h",
-              "RelativeToolTip": "class.h",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAFMAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-30T18:43:00.48Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "string",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\string",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\string",
@@ -320,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "ability.cpp",
               "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\ability.cpp",
               "RelativeDocumentMoniker": "ability.cpp",
@@ -332,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "race.h",
               "DocumentMoniker": "C:\\Users\\maiar\\Documents\\An1\\Semestrul2\\POO\\DND in Compiler\\race.h",
               "RelativeDocumentMoniker": "race.h",

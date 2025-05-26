@@ -72,6 +72,10 @@ class PlayerCharacter : public Entity, public IEffect {
 	std::string m_player_name;
 	std::string m_character_name;
 	Class m_character_class[12];				// can multiclass up to ten classes max (ca doar atatea sunt ca idee)
+	//// debug (trying different data structures to see if one works :(()
+	//Class m_first_class;
+	//std::vector<Class> m_class_vector;
+	//// debug
 	Race m_character_race;
 	CharacterDetails m_character_details;	// structura care contine detalii despre caracter (stats, skills, proficiencies, saving throws, hp)
 	int m_nr_classes;
@@ -79,7 +83,7 @@ class PlayerCharacter : public Entity, public IEffect {
 public:
 	// constructori si destructor
 	PlayerCharacter();
-	PlayerCharacter(std::string playerName, std::string characterName, Class firstCharacterClass, Race characterRace);
+	PlayerCharacter(std::string playerName, std::string characterName, Class& firstCharacterClass, Race characterRace);
 	PlayerCharacter(const PlayerCharacter& PC);
 	~PlayerCharacter();
 	// gettere
@@ -105,6 +109,14 @@ public:
 	// override functii virtuale --
 	void Apply() override;
 	void Remove() override;
+
+	// debug function
+	/*void AddFirstClass(Class& de_adaugat);
+	Class GetFirstClass();*/
+
+	// vector debug function
+	/*void AddClassToVector(Class de_adaugat);
+	Class ReturnSpecificClass(int pos);*/
 };
 
 #endif

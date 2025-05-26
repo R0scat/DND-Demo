@@ -1,39 +1,23 @@
+
 #pragma once
 #ifndef CLASS_H
 #define CLASS_H
 
 #include <string>
-#include "equipment.h"
+#include "equipment.h" 
 #include <vector>
-#include "ability.h"
-//#include "player_character.h"
-
-//struct SpellAtributes { // for spellcasting classes, will be calculated from stats 
-//	int spell_save_dc;
-//	int spell_attack_bonus;
-//	int number_of_spells;
-//};
-//
-//struct SpellSlots { // keeps track of the number of spell slots available for each level FOR THE CURRENT CHARAXTER (aka determined by class level)
-//	int first_lvl;
-//	int second_lvl;
-//	int third_lvl;
-//	int fourth_lvl;
-//	int fifth_lvl;
-//	int sixth_lvl;
-//	int seventh_lvl;
-//	int eighth_lvl;
-//	int ninth_lvl;
-//};
+#include "ability.h"   
 
 // lista dinamica de proficiencies (fiind mai multe si diferite in functie de clasa e mai bine decat sa aloc un anumit numar lowk random)
+// data de tip string si pointerul catre urm elem din lista
 struct Proficiency
 {
 	std::string name;
 	Proficiency* next;
 };
 
-
+// lista simplu inlantuita pt toate echipamentele pe care o sa le aiba personajul 
+// tine data de tip Equipment si pointerul catre urmatorul element din lista
 struct EquippedItem
 {
 	Equipment item;
@@ -46,46 +30,70 @@ protected:
 	std::string m_hit_dice;
 	std::string m_description;
 	int m_class_level;
+
+	// pt lista de proficiencies
 	Proficiency* m_first_prf;
 	Proficiency* m_last_prf;
+
+	// pt lista de equipment
 	EquippedItem* m_first_equipped;
 	EquippedItem* m_last_equipped;
+
+	// vector pt toate abilitatile 
 	std::vector<Ability> m_vector_abilities;
+
+	// vector static ce pastreaza toate tipurile standard de echipamente (am mai multe file-uri cu diferite tipuri de echipamente, ele sunt citite cu o functie din namespace-ul Atribute_Helper)
 	static std::vector<Equipment> m_available_equipment;
-	static int m_total_equipment;
+	
+	// functie ajutatoare pt destructor (cu asta se vor dealoca listele!)
+	void ClearLists();
 
 public:
-	Class();															     // constructor simplu clasa
-	Class(std::string name, std::string hitDice, std::string description, int classLevel);   // constructor parametrii OBS: nu sunt citite proficiency-urile, asta se va face doar printr-o metoda separata
-	Class(const Class& obj);											     // constructor copiere
-	~Class();															     // destructor
-	std::string GetName() const;												     // getter nume -> returneaza numele
-	std::string GetHitDice() const;											     // getter hd ---> returneaza hit dice-ul
-	std::string GetDescription() const;										     // getter desc -> returneaza desc
-	int GetLevel() const;														     // getter lvl --> returneaza level-ul
-	void SetName(std::string name);										     // setter nume
-	void SetHitDice(std::string hitDice);								     // setter hd
-	void SetDescription(std::string description);						     // setter desc
-	void SetLevel(int level);											     // setter lvl + verifica daca valoarea e valida (intre 1 si 20 momentan)
-	void ShowClassDetails();											     // afiseaza toate detaliile clasei cu mesaj frumos <3
-	friend std::ostream& operator << (std::ostream& cout, const Class& obj); // overload pt operatorul "<<"
-	// urm functiile care lucreaza pe lista dinamic alocata de proficiencies
+	Class();
+	Class(std::string name, std::string hitDice, std::string description, int classLevel);
+	Class(const Class& other);											 // copy constructor
+	Class& operator=(const Class& other);                                // copy assignment operator 
+	~Class();															 // destructor
+
+	std::string GetName() const;
+	std::string GetHitDice() const;
+	std::string GetDescription() const;
+	int GetLevel() const;
+
+	void SetName(std::string name);
+	void SetHitDice(std::string hitDice);
+	void SetDescription(std::string description);
+	void SetLevel(int level);
+
+	void ShowClassDetails();
+	friend std::ostream& operator << (std::ostream& cout, const Class& obj);
+
+	// proficiencies
 	void AddProficiency(std::string name);
-	void ShowProficiencies();
+	void ShowProficiencies() const; // Made const as it doesn't modify
 	void DeleteFirstProficiency();
 	void DeleteLastProficiency();
-	// functii pt echipament (lista dinamica)
-	void AddEquipment(Equipment item);
-	void ShowEquipment();
+	// added for completeness if needed by copy/assignment logic, or for external use
+	Proficiency* GetFirstProficiency() const { return m_first_prf; }
+
+
+	// equipment
+	void AddEquipment(const Equipment& item); // Pass by const reference
+	void ShowEquipment() const; // Made const
 	void DeleteFirstEquippedItem();
 	void DeleteLastEquippedItem();
-	// functie pt vectorul de abilitati
-	void AddAbility(Ability de_adaugat);
-	void ShowAbilities();
-	//std::vector<Ability> GetAbilities(); 
-	// functii pt variabila statica m_available_equipment
-	static void SetAvailableEquipment(Equipment array[100], int nr_elements);
-	static std::vector<Equipment> GetAvailableEquipment();
+	EquippedItem* GetFirstEquippedItem() const { return m_first_equipped; }
+
+
+	// abilities
+	void AddAbility(const Ability& de_adaugat); // pass by const reference
+	void ShowAbilities() const; // made const
+	const std::vector<Ability>& GetAbilities() const { return m_vector_abilities; } // getter for abilities
+
+
+	// static available equipment
+	static void SetAvailableEquipment(const Equipment array[], int nr_elements); // pass array by const
+	static const std::vector<Equipment>& GetAvailableEquipment(); // return const reference
 	static void ShowAllAvailableEquipment();
 	static Equipment GetSpecificAvailableEquipment(int contor);
 };
