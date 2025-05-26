@@ -11,6 +11,7 @@
 #include <cstring>
 #include "equipment.h"
 #include <vector>
+#include "ability.h"
 //#include <regex>
 
 namespace Atribute_Helper
@@ -111,7 +112,7 @@ namespace Atribute_Helper
         int total_equipment;
         ReadEquipment(array, total_equipment);
         Class::SetAvailableEquipment(array, total_equipment);
-        Class::ShowAllAvailableEquipment();
+        //Class::ShowAllAvailableEquipment();
     }
     
     inline int FindEquipmentContor(std::string line)
@@ -121,22 +122,65 @@ namespace Atribute_Helper
         for (int i = 0; i < temp.size(); i++)
         {
             if (temp[i].GetAtributeName() == line)
-                return i;
+                return i; 
         }
         //std::cout << "Echipamentul nu a fost gasit :P\n";
         //std::cout << line << '\n';
         return -1;
     }
 
-    inline void ReadAtributes()
+    inline void AddAtribute(std::string line, Ability& current_ability, int contor)
+    {
+        switch (contor)
+        {
+        case 1:
+        {
+            current_ability.SetAtributeName(line);
+            break;
+        }
+        case 2:
+        {
+            try 
+            {
+                int level = std::stoi(line); // functie string to integer din libraria std care transforma string in integer yaya
+                current_ability.SetAbilityLevel(level);
+                //std::cout << "nivelul este: " << level << "\n";
+            }
+            catch (const std::invalid_argument&)
+            {
+                break;
+                //std::cout << "Invalid input: The string is not a valid number (womp womp)\n";
+            }
+            catch (const std::out_of_range&)
+            {
+                break;
+                //std::cout << "Number out of range (daca ai ajuns aici nu stiu ce ai gresit pt ca nu ar tb sa se gaseasca un nr mai mare de 20 ....)\n";
+            }
+             break;
+        }
+        case 3:
+        {
+            current_ability.SetAtributeDescription(line);
+            break;
+        }
+        default:
+            break;
+        }
+    }
+
+    inline void ReadAtributes(Class& given_class, PlayerCharacter& pc)
     {
         char file_name[50] = "resources/class_abilities/paladin.txt";
+        // TB MODIFICAT PT TOATE CLASELE NU DOAR PT PALADIN !!
         std::ifstream fin(file_name);
 
         std::string line;
-        Class given_class;
-        PlayerCharacter pc;
+        //Class given_class;
+        //PlayerCharacter pc;
+        Ability current_ability;
         int current_class_atribute = 0;
+        int contor_abilitati = 1;
+        int contor_atribute_abilitate = 0;
         // class atributes in this order in file: proficiency, equipment, abilities
         
         while (std::getline(fin, line)) // reading given file
@@ -173,18 +217,44 @@ namespace Atribute_Helper
             }
             case 3:
             {
+                /*std::cout << "---------------------------\n";
+                std::cout << "contor: " << contor_atribute_abilitate << "\n";
+                std::cout << line << '\n';*/
+                //std::cout << "---------------------------\n";
                 if (line != "// abilities")
-                    break;
+                {
+                    if (line == "~") // fiecare abilitate este despartita printr-un '~'
+                    {
+                        contor_abilitati++; // numarul total de abilitati 
+                        contor_atribute_abilitate = 0; // fiecare atribut al unei abilitati este pastrat de contorul asta, atunci cand se trece la abilitate noua se reseteaza contorul
+                        //std::cout << current_ability << '\n';
+                        given_class.AddAbility(current_ability);
+                    }
+                    else
+                    {
+                        contor_atribute_abilitate++; // daca nu se trece la abilitate noua atunci creste contorul atributelor din abilitate
+                        //std::cout << "contor: " << contor_atribute_abilitate << " pt abilitatea:\n " << line << "\n";
+                        AddAtribute(line, current_ability, contor_atribute_abilitate);
+                    }
+                        
+                    // OBS: fisierul este structurat asftel incat pt contor_atribute_abilitate = 1 sa apara numele abilitatii, pt 2 nivelul sau si pt 3 descrierea
+                    
+                }
+                break;
                 //std::cout << current_class_atribute << "\n";
             }
             
             }
             
         }
-        std::cout << "\nshowing al prof:\n";
-        given_class.ShowProficiencies();
-        std::cout << "\nshowing all equip: \n";
-        given_class.ShowEquipment();
+
+        //std::cout << "\nshowing al prof:\n";
+        //given_class.ShowProficiencies();
+        //std::cout << "\nshowing all equip: \n";
+        //given_class.ShowEquipment();
+        //std::cout << "------------------------\n";
+        //given_class.ShowAbilities();
+
 		pc.AddCharacterClass(given_class);
         fin.close();
     }

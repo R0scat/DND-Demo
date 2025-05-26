@@ -68,8 +68,20 @@ int main()
 
     //Atribute_Helper::ReadAtributes(); // currently testing getting atributes for a rando class !!
     
+    Class test_class;
+    PlayerCharacter test_pc;
+
+    test_class.SetName("paladin");
+
     Atribute_Helper::PopulateStaticAvailableEquipment();
-    Atribute_Helper::ReadAtributes();
+    Atribute_Helper::ReadAtributes(test_class, test_pc);
+
+    std::cout << "showing abilities: \n";
+    test_class.ShowAbilities();
+    std::cout << "showing proficiencies: \n";
+    test_class.ShowProficiencies();
+    std::cout << "showing equipment: \n";
+    test_class.ShowEquipment();
 
   //  Equipment available_equipment[40];
   //  int total_equipment;

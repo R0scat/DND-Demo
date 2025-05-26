@@ -5,6 +5,7 @@
 #include <string>
 #include "equipment.h"
 #include <vector>
+#include "ability.h"
 //#include "player_character.h"
 
 //struct SpellAtributes { // for spellcasting classes, will be calculated from stats 
@@ -49,7 +50,7 @@ protected:
 	Proficiency* m_last_prf;
 	EquippedItem* m_first_equipped;
 	EquippedItem* m_last_equipped;
-	//static Equipment m_available_equipment[100];
+	std::vector<Ability> m_vector_abilities;
 	static std::vector<Equipment> m_available_equipment;
 	static int m_total_equipment;
 
@@ -78,6 +79,10 @@ public:
 	void ShowEquipment();
 	void DeleteFirstEquippedItem();
 	void DeleteLastEquippedItem();
+	// functie pt vectorul de abilitati
+	void AddAbility(Ability de_adaugat);
+	void ShowAbilities();
+	//std::vector<Ability> GetAbilities(); 
 	// functii pt variabila statica m_available_equipment
 	static void SetAvailableEquipment(Equipment array[100], int nr_elements);
 	static std::vector<Equipment> GetAvailableEquipment();

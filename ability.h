@@ -3,7 +3,7 @@
 #define ABILITY_H
 
 #include "atribute.h"
-#include "iequippable.h"
+//#include "iequippable.h"
 #include "entity.h"
 
 // clasa folosita mai mult pt a putea echipa abilitatea in functie de level-ul personajului
@@ -15,6 +15,7 @@ public:
 	//void Unequip(Class enitty) override;
 	void SetAbilityLevel(int level);
 	int GetAbilityLevel() const;
+	friend std::ostream& operator<<(std::ostream& os, const Ability& ability);
 };
 
 

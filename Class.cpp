@@ -198,6 +198,22 @@ void Class::DeleteLastEquippedItem()
 	delete current->next;
 }
 
+//std::vector<Ability> Class::GetAbilities()
+//{
+//	return this->m_vector_abilities;
+//}
+
+void Class::AddAbility(Ability de_adaugat)
+{
+	this->m_vector_abilities.push_back(de_adaugat);
+}
+
+void Class::ShowAbilities()
+{
+	for (Ability item : m_vector_abilities)
+		std::cout << item << '\n';
+}
+
 void Class::SetAvailableEquipment(Equipment array[100], int nr_elements)
 {
 	m_available_equipment.assign(array, array + nr_elements);
