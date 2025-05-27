@@ -2,11 +2,13 @@
 #include <fstream>
 #include <string>
 #include "dnd_helper.h"
+#include "dm_helper.h"
 #include "atribute_helper.h"
 #include "class.h"
 #include "race.h"
 #include "player_character.h"
 #include <vector>
+#include "creature.h"
 
 static void PlayerMode() {
     int option_int, lvl, ongoing = 1;
@@ -86,31 +88,34 @@ static void PlayerMode() {
 
 static void Debug()
 {
-    Class test_class;
-    PlayerCharacter test_pc;
-
-    test_class.SetName("bard");
-
-    Atribute_Helper::PopulateStaticAvailableEquipment();
-    Atribute_Helper::ReadAtributes(test_class/*, test_pc*/);
-
-    std::cout << "showing abilities: \n";
-    test_class.ShowAbilities();
-    std::cout << "showing proficiencies: \n";
-    test_class.ShowProficiencies();
-    std::cout << "\nshowing equipment: \n";
-    test_class.ShowEquipment();
+    Creature test_entity;
+    std::cout << test_entity;
 }
 
+static void DungeonMasterMode()
+{
+    std::vector<Entity> all_entities;
+    bool ongoing = true;
+    while (ongoing)
+    {
+        int option;
+        DM_Helper::ShowDmMenu();
+        std::cin >> option;
+        DM_Helper::DmMenuPicker(option, ongoing);
+    }
+}
 
 int main()
 {
     Atribute_Helper::PopulateStaticAvailableEquipment();
-    PlayerMode();
+    //PlayerMode();
+    //DungeonMasterMode();
+    Debug();
 
+    
     //Atribute_Helper::ReadAtributes(); // currently testing getting atributes for a rando class !!
     
-    //Debug();
+    
 
   //  Equipment available_equipment[40];
   //  int total_equipment;

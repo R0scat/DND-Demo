@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -130,6 +130,7 @@
     <ClCompile Include="ability.cpp" />
     <ClCompile Include="atribute.cpp" />
     <ClCompile Include="class.cpp" />
+    <ClCompile Include="creature.cpp" />
     <ClCompile Include="DND in Compiler.cpp" />
     <ClCompile Include="entity.cpp" />
     <ClCompile Include="equipment.cpp" />
@@ -141,6 +142,8 @@
     <ClInclude Include="atribute.h" />
     <ClInclude Include="atribute_helper.h" />
     <ClInclude Include="class.h" />
+    <ClInclude Include="creature.h" />
+    <ClInclude Include="dm_helper.h" />
     <ClInclude Include="dnd_helper.h" />
     <ClInclude Include="entity.h" />
     <ClInclude Include="equipment.h" />

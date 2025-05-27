@@ -46,7 +46,7 @@ protected:
 	static std::vector<Equipment> m_available_equipment;
 	
 	// functie ajutatoare pt destructor (cu asta se vor dealoca listele!)
-	void ClearLists();
+	void _ClearLists();
 
 public:
 	Class();
@@ -76,7 +76,6 @@ public:
 	// added for completeness if needed by copy/assignment logic, or for external use
 	Proficiency* GetFirstProficiency() const { return m_first_prf; }
 
-
 	// equipment
 	void AddEquipment(const Equipment& item); // Pass by const reference
 	void ShowEquipment() const; // Made const
@@ -84,12 +83,10 @@ public:
 	void DeleteLastEquippedItem();
 	EquippedItem* GetFirstEquippedItem() const { return m_first_equipped; }
 
-
 	// abilities
 	void AddAbility(const Ability& de_adaugat); // pass by const reference
 	void ShowAbilities() const; // made const
 	const std::vector<Ability>& GetAbilities() const { return m_vector_abilities; } // getter for abilities
-
 
 	// static available equipment
 	static void SetAvailableEquipment(const Equipment array[], int nr_elements); // pass array by const

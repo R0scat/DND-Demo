@@ -9,7 +9,7 @@
 std::vector<Equipment> Class::m_available_equipment;
 
 // helper function to deallocate lists
-void Class::ClearLists() {
+void Class::_ClearLists() {
 	// clear proficiencies
 	Proficiency* current_prf = m_first_prf;
 	while (current_prf != nullptr) // cat timp nu e null elem curent
@@ -105,7 +105,7 @@ Class& Class::operator=(const Class& other)
 	}
 
 	// se sterg toate datele alocate dinamic vechi pastrate de obiect (alocarea dinamica neavand un numar fix de elemente chetia asta e necesara pt ca altfel se poate ramane cu date in surplus - also probabil memory leak dar im not that sure abt it)
-	ClearLists(); // dealocare ambele liste (cu functia privata)
+	_ClearLists(); // dealocare ambele liste (cu functia privata)
 	this->m_vector_abilities.clear(); // Clear the vector
 
 	// copiere membrii simpli
@@ -143,7 +143,7 @@ Class& Class::operator=(const Class& other)
 // destructor
 Class::~Class()
 {
-	ClearLists(); // dealocare liste dinamica
+	_ClearLists(); // dealocare liste dinamica
 	// m_vector_abilities se va dealoca de la sine
 }
 

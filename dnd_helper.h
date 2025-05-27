@@ -400,11 +400,11 @@ namespace Dnd_Helper {
         }
 		case 7:
         {
-            
+            break;
         }
         case 8:
         {
-
+            break;
         }
         case 9:
         {

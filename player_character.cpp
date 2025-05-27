@@ -41,7 +41,7 @@ PlayerCharacter::PlayerCharacter(const PlayerCharacter& obj)
 
 PlayerCharacter::~PlayerCharacter() 
 {
-	char option;
+	/*char option;
 	std::cout << "Character deleted, would you like to make a new one? Y/N";
 	std::cin >> option;
 	if (option == 'Y' || option == 'y')
@@ -50,7 +50,7 @@ PlayerCharacter::~PlayerCharacter()
 		Dnd_Helper::PickPlayerCharacter();
 	}
 	else
-		std::cout << "oh well ...";
+		std::cout << "oh well ...";*/
 }
 
 std::string PlayerCharacter::GetPlayerName() const
@@ -152,12 +152,12 @@ void PlayerCharacter::RecalculateLevel(PlayerCharacter& givenCharacter)
 
 void PlayerCharacter::SetCharacterStats(int str, int dex, int con, int intl, int wis, int chars)
 {
-	this->m_character_details.stats.strength = str;
-	this->m_character_details.stats.dexterity = dex;
-	this->m_character_details.stats.constitution = con;
-	this->m_character_details.stats.charisma = chars;
-	this->m_character_details.stats.intelligence = intl;
-	this->m_character_details.stats.wisdom = wis;
+	this->m_details.stats.strength = str;
+	this->m_details.stats.dexterity = dex;
+	this->m_details.stats.constitution = con;
+	this->m_details.stats.charisma = chars;
+	this->m_details.stats.intelligence = intl;
+	this->m_details.stats.wisdom = wis;
 }
 
 void PlayerCharacter::CalculateSkillBonuses()
@@ -165,12 +165,12 @@ void PlayerCharacter::CalculateSkillBonuses()
 
 }
 
-void PlayerCharacter::Apply()
+int PlayerCharacter::CalculateAbilityStrenghts()
 {
-
+	return 0;
 }
 
-void PlayerCharacter::Remove()
+void PlayerCharacter::InputMessage()
 {
 
 }
