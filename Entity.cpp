@@ -13,13 +13,17 @@ Entity::Entity()
 	std::cout << "Creating entity, choose your HP:\n";
 	std::cin >> hp;
 
-	std::cout << "\nChose your stats:\n!Note: input must be given in the following format: [strenght dexterity constitution intelligence wisdom charisma]\n";
-	std::cin >> details.stats.strength;
-	std::cin >> details.stats.dexterity;
-	std::cin >> details.stats.constitution;
-	std::cin >> details.stats.intelligence;
-	std::cin >> details.stats.wisdom;
-	std::cin >> details.stats.charisma;
+	do
+	{
+		std::cout << "\nChose your stats:\n!Note: input must be in the interval [0, 30] and given in the following format: [strenght dexterity constitution intelligence wisdom charisma]\n";
+		std::cin >> details.stats.strength;
+		std::cin >> details.stats.dexterity;
+		std::cin >> details.stats.constitution;
+		std::cin >> details.stats.intelligence;
+		std::cin >> details.stats.wisdom;
+		std::cin >> details.stats.charisma;
+	} while (Entity::CheckIfStatsInInterval() != true);
+	
 
 	Entity::PopulateSkills(details);
 	Entity::CalculateSkills(details);
@@ -68,7 +72,7 @@ void Entity::ShowAllEffects()
 
 void Entity::CalculateSkills(EntityDetails& details)
 {
-	for (int i = 0; i < 17; i++)
+	for (int i = 0; i < 18; i++)
 	{
 		if (strcmp(details.skills[i].statType, "strenght") == 0)
 		{
@@ -136,8 +140,8 @@ void Entity::PopulateSkills(EntityDetails& details)
 		"intelligence",
 		"wisdom",
 		"charisma", // performance
-		"persuasion",
-		"religion",
+		"charisma",
+		"intelligence",
 		"dexterity",
 		"dexterity",
 		"wisdom"
@@ -164,3 +168,59 @@ std::ostream& operator << (std::ostream& cout, const Entity& obj)
 	return cout;
 }
 
+void Entity::ChangeCharacterStats()
+{
+	do
+	{
+		std::cout << "To change stats you must first give new values\n";
+		std::cout << "Note: input must be in the interval [0, 30] and given in the following format: [strenght dexterity constitution intelligence wisdom charisma]\n";
+		std::cin >> this->m_details.stats.strength;
+		std::cin >> this->m_details.stats.dexterity;
+		std::cin >> this->m_details.stats.constitution;
+		std::cin >> this->m_details.stats.intelligence;
+		std::cin >> this->m_details.stats.wisdom;
+		std::cin >> this->m_details.stats.charisma;
+		std::cout << "Stats changed!\n";
+	} while (Entity::CheckIfStatsInInterval() != true);
+	
+	// recalculating skills after ability change
+	Entity::CalculateSkills(this->m_details);
+}
+
+void Entity::ChangeGivenProficiency(char prf_name[50])
+{
+	for (int i = 0; i < 18; i++)
+		if (strcmp(this->m_details.skills[i].name, prf_name) == 0)
+		{
+			if (this->m_details.skills[i].nr == 0) // verific daca avea deja proficiency 
+			{
+				this->m_details.skills[i].proficient = true;
+				this->m_details.skills[i].bonus += 2;
+				this->m_details.skills[i].nr++;
+			}
+			if (this->m_details.skills[i].nr == 1) // daca avea deja proficiency se pune expertise 
+			{
+				this->m_details.skills[i].expert = true;
+				this->m_details.skills[i].bonus += 2;
+				this->m_details.skills[i].nr++;
+			}
+			// dnd nu are mai mult de atat soooo aiaie
+		}
+}
+
+bool Entity::CheckIfStatsInInterval()
+{
+	if (this->m_details.stats.strength < 0 || this->m_details.stats.strength > 30)
+		return false;
+	if (this->m_details.stats.dexterity < 0 || this->m_details.stats.dexterity > 30)
+		return false;
+	if (this->m_details.stats.constitution < 0 || this->m_details.stats.constitution > 30)
+		return false;
+	if (this->m_details.stats.intelligence < 0 || this->m_details.stats.intelligence > 30)
+		return false;
+	if (this->m_details.stats.wisdom < 0 || this->m_details.stats.wisdom > 30)
+		return false;
+	if (this->m_details.stats.charisma < 0 || this->m_details.stats.charisma > 30)
+		return false;
+	return true;
+}

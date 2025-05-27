@@ -29,14 +29,7 @@ static void PlayerMode() {
 
     // pt a include toate abilitatile primei clase alese (abilitati luate din fisiere .txt)
     Atribute_Helper::ReadAtributes(chosen_class);
-    // debug
-    /*std::cout << "show abilities\n";
-    chosen_class.ShowAbilities();
-    std::cout << "show equipment\n";
-    chosen_class.ShowEquipment();
-    std::cout << "show proficiencies\n";
-    chosen_class.ShowProficiencies();*/
-    // debug
+    // functia populeaza variabilele dinamice din chosen class, aceasta fiind apelata prin referinta
 
     // pt alegerea lvl-ului
     std::cout << "Now, choose your level (reminder: unless multi-classing, your character can be at most lvl 20)\n";
@@ -108,9 +101,9 @@ static void DungeonMasterMode()
 int main()
 {
     Atribute_Helper::PopulateStaticAvailableEquipment();
-    //PlayerMode();
+    PlayerMode();
     //DungeonMasterMode();
-    Debug();
+    //Debug();
 
     
     //Atribute_Helper::ReadAtributes(); // currently testing getting atributes for a rando class !!

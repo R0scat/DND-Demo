@@ -10,6 +10,7 @@
 #include "player_character.h"
 #include "ability.h"
 #include "equipment.h"
+#include "atribute_helper.h"
 
 namespace Dnd_Helper {
     inline void ClearScreen()
@@ -319,16 +320,19 @@ namespace Dnd_Helper {
 
     inline void Menu()
     {
-        std::cout << "Your character basics have all been set up, what would you like to do?\n";
-        std::cout << "1. show basic character details\n";
-        std::cout << "2. add another class\n";
-        std::cout << "3. show equipment\n";
-        std::cout << "4. show abilities\n";
-        std::cout << "5. show proficiencies\n";
-        std::cout << "6. level up\n";
-        std::cout << "7. change character stats (e.g. strenght, charisma ...)\n";
-        std::cout << "8. change ability proficiencies (e.g. arcana, history, perception ...)\n";
-        std::cout << "9. quit (deleting the character...)\n";
+        std::cout << "|============================================================================\n";
+        std::cout << "| Your character details have all been set up, what would you like to do?   |\n";
+        std::cout << "| 1. show basic character details                                           |\n";
+        std::cout << "| 2. add another class                                                      |\n";
+        std::cout << "| 3. show equipment                                                         |\n";
+        std::cout << "| 4. show abilities                                                         |\n";
+        std::cout << "| 5. show proficiencies                                                     |\n";
+        std::cout << "| 6. level up                                                               |\n";
+        std::cout << "| 7. change character stats (e.g. strenght, charisma ...)                   |\n";
+        std::cout << "| 8. change ability proficiency (e.g. arcana, history, perception ...)    |\n";
+        std::cout << "| 9. show in depth character details (ability scores, bonuses etc.)         |\n";
+        std::cout << "| 10. quit (deleting the character...)                                      |\n";
+        std::cout << "|============================================================================\n";
     }
 
 	inline void MenuPicker(int option, int &ongoing, PlayerCharacter &pc)
@@ -337,12 +341,6 @@ namespace Dnd_Helper {
         int option_int;
         Class chosen_class;
         Dnd_Helper::ClearScreen();
-
-        // debug
-        Class first_class;
-        first_class = pc.GetSpecificCharacterClass(0);
-        // debug
-
 
 		switch (option)
 		{
@@ -358,6 +356,10 @@ namespace Dnd_Helper {
 			chosen_class = Dnd_Helper::PickClass(option_int);
             std::cout << chosen_class << std::endl;
 
+            //populate class atributes
+            Atribute_Helper::ReadAtributes(chosen_class);
+
+            // set the class level
             std::cout << "Choose level for this class (total character level will be equal to the sum of thhe two classes)\n";
 			std::cin >> option_int;
 			chosen_class.SetLevel(option_int);
@@ -368,19 +370,34 @@ namespace Dnd_Helper {
         }
 		case 3:
 			std::cout << "Showing all equipment:\n\n";
-            // currently only showing for the first class tho
-            first_class.ShowEquipment();
+            for (int i = 0; i < pc.GetNumberOfClasses(); i++)
+            {
+                std::cout << "=================================\n";
+                std::cout << "Currently showing " << pc.GetSpecificCharacterClass(i).GetName() << " items: \n";
+                pc.GetSpecificCharacterClass(i).ShowEquipment();
+            }
+            std::cout << "=================================\n";
             break;
 		case 4:
 			std::cout << "Showing all abilities:\n\n";
-            // currently only showing for first class + not caring about level
-            first_class.ShowAbilities();
+            // taking each class from the class array and showing abilities
+            for (int i = 0; i < pc.GetNumberOfClasses(); i++)
+            {
+                std::cout << "=================================\n";
+                std::cout << "Currently showing " << pc.GetSpecificCharacterClass(i).GetName() << " abilities: \n";
+                pc.GetSpecificCharacterClass(i).ShowAbilities();
+            }
+            std::cout << "=================================\n";
             break;
 		case 5:
 			std::cout << "Showing all proficiencies: \n\n";
-            // for the first class only rn
-            first_class.ShowProficiencies();
-            //first_class.ShowProficiencies();
+            for (int i = 0; i < pc.GetNumberOfClasses(); i++)
+            {
+                std::cout << "=================================\n";
+                std::cout << "Currently showing " << pc.GetSpecificCharacterClass(i).GetName() << " proficiencies: \n";
+                pc.GetSpecificCharacterClass(i).ShowProficiencies();
+            }
+            std::cout << "=================================\n";
             break;
 		case 6:
         {
@@ -400,13 +417,24 @@ namespace Dnd_Helper {
         }
 		case 7:
         {
+            // metoda a entitatii - ia un input si modifica stat urile accordingly
+            pc.ChangeCharacterStats();
             break;
         }
         case 8:
         {
+            char prf_name[50];
+            std::cout << "Input stat proficiency you would like to change: \n";
+            std::cin >> prf_name;
+            pc.ChangeGivenProficiency(prf_name);
             break;
         }
         case 9:
+        {
+            std::cout << pc;
+            break;
+        }
+        case 10:
         {
             std::cout << "Quitting...\n";
             ongoing = 0;

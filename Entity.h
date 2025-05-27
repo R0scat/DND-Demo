@@ -49,32 +49,30 @@ struct Skill
 	}
 };
 
-struct SavingThrows { // will be calculated from stats + should be modified by FIRST chosen class 
-	int strength;
-	int dexterity;
-	int constitution;
-	int intelligence;
-	int wisdom;
-	int charisma;
-
-	friend std::ostream& operator << (std::ostream& cout, const SavingThrows& obj)
-	{
-		cout << "strenght = " << obj.strength << "\n";
-		cout << "dexterity = " << obj.dexterity << "\n";
-		cout << "constitution = " << obj.constitution << "\n";
-		cout << "intelligence = " << obj.intelligence << "\n";
-		cout << "wisdom = " << obj.wisdom << "\n";
-		cout << "charisma = " << obj.charisma << "\n";
-		return cout;
-	}
-};
+//struct SavingThrows { // will be calculated from stats + should be modified by FIRST chosen class 
+//	int strength;
+//	int dexterity;
+//	int constitution;
+//	int intelligence;
+//	int wisdom;
+//	int charisma;
+//
+//	friend std::ostream& operator << (std::ostream& cout, const SavingThrows& obj)
+//	{
+//		cout << "strenght = " << obj.strength << "\n";
+//		cout << "dexterity = " << obj.dexterity << "\n";
+//		cout << "constitution = " << obj.constitution << "\n";
+//		cout << "intelligence = " << obj.intelligence << "\n";
+//		cout << "wisdom = " << obj.wisdom << "\n";
+//		cout << "charisma = " << obj.charisma << "\n";
+//		return cout;
+//	}
+//};
 
 struct EntityDetails // pun toate astea intr-un singru struct INAINTE sa le pun in clasa PlayerCharacter pt ca pare mai organizat
 {
 	Stats stats;
 	Skill skills[18]; // sunt mereu aceleasi skil-uri deci nu are sens sa le pun intr- strctura de date dinamica (cum e lista de proficiencies)
-	SavingThrows saving_throws;
-	int level;
 
 	friend std::ostream& operator << (std::ostream& cout, const EntityDetails& obj)
 	{
@@ -82,8 +80,6 @@ struct EntityDetails // pun toate astea intr-un singru struct INAINTE sa le pun 
 		cout << "Skills: \n";
 		for (int i = 0; i < 18; i++)
 			cout  << obj.skills[i] << "\n";
-		cout << "Saving throws: " << obj.saving_throws << "\n";
-		cout << "Level: " << obj.level << "\n";
 		return cout;
 	}
 };
@@ -102,6 +98,9 @@ public:
 	void ShowAllEffects();
 	void CalculateSkills(EntityDetails& details);
 	void PopulateSkills(EntityDetails& details);
+	void ChangeCharacterStats();
+	void ChangeGivenProficiency(char prf_name[50]);
+	bool CheckIfStatsInInterval();
 
 	virtual int CalculateAbilityStrenghts() = 0;
 	virtual void InputMessage();

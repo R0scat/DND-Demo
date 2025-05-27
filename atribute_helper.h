@@ -173,7 +173,7 @@ namespace Atribute_Helper
         std::string file_name = "resources/class_abilities/";
         file_name = file_name + given_class.GetName();
         file_name = file_name + ".txt";
-        std::cout << file_name << "\n";
+        //std::cout << file_name << "\n";
         std::ifstream fin(file_name);
 
         std::string line;
