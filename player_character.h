@@ -46,7 +46,7 @@ public:
 
 	// override functie din entity
 	int CalculateAbilityStrenghts() override;
-	void InputMessage() override;
+	//void InputMessage() override;
 	// debug function
 	/*void AddFirstClass(Class& de_adaugat);
 	Class GetFirstClass();*/

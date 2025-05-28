@@ -10,10 +10,10 @@ class Creature : public Entity
 {
 	std::string m_type; // humanoid, plant, fiend etc.
 
-
 public:
+	void SetType(std::string type);
 	int CalculateAbilityStrenghts() override;
-	void InputMessage() override;
+	//void InputMessage() override;
 };
 
 #endif // !CREATURE_H

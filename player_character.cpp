@@ -167,12 +167,13 @@ void PlayerCharacter::CalculateSkillBonuses()
 
 int PlayerCharacter::CalculateAbilityStrenghts()
 {
-	return 0;
-}
-
-void PlayerCharacter::InputMessage()
-{
-
+	int ab_str = 0;
+	for (int i = 0; i < 18; i++)
+		ab_str += this->m_details.skills[i].bonus;
+	ab_str += this->m_nr_classes;
+	ab_str += this->m_level;
+	//std::cout << "\npt! player!\n";
+	return ab_str;
 }
 
 // debug

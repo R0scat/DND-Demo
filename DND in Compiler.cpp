@@ -9,6 +9,7 @@
 #include "player_character.h"
 #include <vector>
 #include "creature.h"
+#include "entity_manager.h"
 
 static void PlayerMode() {
     int option_int, lvl, ongoing = 1;
@@ -51,20 +52,6 @@ static void PlayerMode() {
 
     PlayerCharacter pc(username, character_name, chosen_class, chosen_race); // aici se construieste in sine Player Character-ul
 
-    // debug
-    //std::cout << "show abilities\n";
-    //pc.GetSpecificCharacterClass(1).ShowAbilities();
-    //pc.AddFirstClass(chosen_class);
-    //pc.GetFirstClass().ShowAbilities();
-    //std::cout << "\nmiau\n";
-    /*pc.AddClassToVector(chosen_class);
-    pc.ReturnSpecificClass(0).ShowAbilities();
-    pc.ReturnSpecificClass(0).ShowClassDetails();*/
-    //std::cout << "\nmiau\n";
-    //chosen_class.ShowAbilities();
-    //chosen_class.ShowAbilities();
-    // debug
-
     std::cout << "Great! Your character currently looks like this:\n";
     pc.ShowPlayerCharacterDetails();
     std::cout << "Press enter to continue!\n";
@@ -81,8 +68,7 @@ static void PlayerMode() {
 
 static void Debug()
 {
-    Creature test_entity;
-    std::cout << test_entity;
+    
 }
 
 static void DungeonMasterMode()
@@ -101,21 +87,7 @@ static void DungeonMasterMode()
 int main()
 {
     Atribute_Helper::PopulateStaticAvailableEquipment();
-    PlayerMode();
-    //DungeonMasterMode();
+    //PlayerMode();
+    DungeonMasterMode();
     //Debug();
-
-    
-    //Atribute_Helper::ReadAtributes(); // currently testing getting atributes for a rando class !!
-    
-    
-
-  //  Equipment available_equipment[40];
-  //  int total_equipment;
-  //  Atribute_Helper::ReadEquipment(available_equipment, total_equipment); // testing file reading function nr.2
-  //  std::cout << "======================TESTING===========================\n";
-  //  for (int i = 0; i < total_equipment; i++)
-  //  {
-		//std::cout << available_equipment[i] << std::endl;
-  //  }
 }

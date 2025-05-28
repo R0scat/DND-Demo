@@ -102,8 +102,8 @@ public:
 	void ChangeGivenProficiency(char prf_name[50]);
 	bool CheckIfStatsInInterval();
 
-	virtual int CalculateAbilityStrenghts() = 0;
-	virtual void InputMessage();
+	virtual int CalculateAbilityStrenghts();
+	//virtual void InputMessage();
 	friend std::ostream& operator << (std::ostream& cout, const Entity& obj);
 
 protected:

@@ -32,6 +32,13 @@ Entity::Entity()
 	this->m_details = details;
 }
 
+Entity::Entity(const Entity& obj)
+{
+	this->m_health_points = obj.m_health_points;
+	this->m_details = obj.m_details;
+	this->m_active_effects = obj.m_active_effects;
+}
+
 Entity::~Entity() 
 {
 	//cout << "Destroyed Entity!" << endl;
@@ -156,9 +163,9 @@ void Entity::PopulateSkills(EntityDetails& details)
 	}
 }
 
-void Entity::InputMessage()
+int Entity::CalculateAbilityStrenghts()
 {
-	
+	return 0;
 }
 
 std::ostream& operator << (std::ostream& cout, const Entity& obj)
