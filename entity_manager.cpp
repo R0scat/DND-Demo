@@ -24,3 +24,13 @@ std::vector<Entity*> EntityManager::GetEntityVector()
 {
 	return m_all_entities;
 }
+
+void EntityManager::ShowEffectsForEachEntity()
+{
+	for (int i = 0; i < m_all_entities.size(); i++)
+	{
+		std::cout << "Effect(s) for entity number " << (i + 1) << ":\n";
+		m_all_entities[i]->ShowAllEffects();
+		std::cout << "\n";
+	}
+}

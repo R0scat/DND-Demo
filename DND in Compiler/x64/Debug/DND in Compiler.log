@@ -1,2 +1,9 @@
-﻿  entity_manager.cpp
+﻿  DND in Compiler.cpp
+C:\Users\maiar\Documents\An1\Semestrul2\POO\DND in Compiler\dnd_helper.h(123,13): warning C4101: 'lvl': unreferenced local variable
+  (compiling source file 'DND%20in%20Compiler.cpp')
+  
+C:\Users\maiar\Documents\An1\Semestrul2\POO\DND in Compiler\dm_helper.h(49,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'DND%20in%20Compiler.cpp')
+  
+C:\Users\maiar\Documents\An1\Semestrul2\POO\DND in Compiler\dm_helper.h(42,1): warning C4715: 'DM_Helper::ChooseDice': not all control paths return a value
   DND in Compiler.vcxproj -> C:\Users\maiar\Documents\An1\Semestrul2\POO\DND in Compiler\x64\Debug\DND in Compiler.exe

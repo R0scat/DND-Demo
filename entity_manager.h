@@ -15,6 +15,7 @@ public:
 	static void ShowAllEntities();
 	static void AddEntity(Entity* &de_adaugat);
 	static std::vector<Entity*> GetEntityVector();
+	static void ShowEffectsForEachEntity();
 };
 
 #endif // !ENTITYMANAGER_H

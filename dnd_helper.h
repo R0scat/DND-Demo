@@ -320,7 +320,7 @@ namespace Dnd_Helper {
 
     inline void Menu()
     {
-        std::cout << "|============================================================================\n";
+        std::cout << "+===========================================================================+\n";
         std::cout << "| Your character details have all been set up, what would you like to do?   |\n";
         std::cout << "| 1. show basic character details                                           |\n";
         std::cout << "| 2. add another class                                                      |\n";
@@ -329,10 +329,10 @@ namespace Dnd_Helper {
         std::cout << "| 5. show proficiencies                                                     |\n";
         std::cout << "| 6. level up                                                               |\n";
         std::cout << "| 7. change character stats (e.g. strenght, charisma ...)                   |\n";
-        std::cout << "| 8. change ability proficiency (e.g. arcana, history, perception ...)    |\n";
+        std::cout << "| 8. change ability proficiency (e.g. arcana, history, perception ...)      |\n";
         std::cout << "| 9. show in depth character details (ability scores, bonuses etc.)         |\n";
         std::cout << "| 10. quit (deleting the character...)                                      |\n";
-        std::cout << "|============================================================================\n";
+        std::cout << "+===========================================================================+\n";
     }
 
 	inline void MenuPicker(int option, int &ongoing, PlayerCharacter &pc)

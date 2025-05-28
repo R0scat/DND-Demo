@@ -10,6 +10,7 @@
 #include <vector>
 #include "creature.h"
 #include "entity_manager.h"
+#include "singleton_menu2.h"
 
 static void PlayerMode() {
     int option_int, lvl, ongoing = 1;
@@ -68,7 +69,7 @@ static void PlayerMode() {
 
 static void Debug()
 {
-    
+
 }
 
 static void DungeonMasterMode()
@@ -85,9 +86,16 @@ static void DungeonMasterMode()
 }
 
 int main()
-{
-    Atribute_Helper::PopulateStaticAvailableEquipment();
-    //PlayerMode();
-    DungeonMasterMode();
-    //Debug();
+{ 
+    SingletonMenu& menu = SingletonMenu::GetInstance();
+
+    // add the menu options (the "roles")
+    menu.AddMenuItem(1, "Player Mode", PlayerMode);
+    menu.AddMenuItem(2, "Dungeon Master Mode", DungeonMasterMode);
+    
+    menu.ShowMenu(); // show + execute the actual menu
+
+    return 0;
+
+    return 0;
 }

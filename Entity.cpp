@@ -64,8 +64,17 @@ void Entity::Apply(Effect applied_effect)
 	this->m_active_effects.push_back(applied_effect);
 }
 
-void Entity::Remove(Effect removed_effect)
+Effect Entity::GetEffectByName(std::string effect_name)
 {
+	for (auto item : m_active_effects)
+		if (item.GetName() == effect_name)
+			return item;
+}
+
+void Entity::Remove(std::string effect_name)
+{
+	Effect removed_effect = this->GetEffectByName(effect_name);
+
 	std::vector<Effect>::iterator position = std::find(m_active_effects.begin(), m_active_effects.end(), removed_effect);
 	if (position != m_active_effects.end())
 		m_active_effects.erase(position);
@@ -74,7 +83,10 @@ void Entity::Remove(Effect removed_effect)
 void Entity::ShowAllEffects()
 {
 	for (Effect item : this->m_active_effects)
+	{
 		std::cout << item;
+		std::cout << "\n";
+	}
 }
 
 void Entity::CalculateSkills(EntityDetails& details)
@@ -213,6 +225,11 @@ void Entity::ChangeGivenProficiency(char prf_name[50])
 			}
 			// dnd nu are mai mult de atat soooo aiaie
 		}
+}
+
+std::vector<Effect> Entity::ReturnEffectVector()
+{
+	return this->m_active_effects;
 }
 
 bool Entity::CheckIfStatsInInterval()

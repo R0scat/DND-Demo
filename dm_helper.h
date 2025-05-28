@@ -74,8 +74,10 @@ namespace DM_Helper {
 		std::cout << "3. show all entities\n";
 		std::cout << "4. calculate strenghts for all entities\n";
 		std::cout << "5. apply effect on given entity\n";
-		std::cout << "6. roll dice menu\n";
-		std::cout << "7. exit\n";
+		std::cout << "6. remove effect from given entity\n";
+		std::cout << "7. show all effects for all entities\n";
+		std::cout << "8. roll dice menu\n";
+		std::cout << "9. exit\n";
 	}
 
 	inline void DmMenuPicker(int option, bool &ongoing)
@@ -159,13 +161,13 @@ namespace DM_Helper {
 
 			std::string effect_name, effect_desc;
 			std::cout << "To apply an effect you must first give it a name and a description.\nInput effect name:\n";
-			std::cin >> effect_name;
+			std::getline(std::cin, effect_name);
 			std::cout << "Input effect description:\n";
-			std::cin >> effect_desc;
+			std::getline(std::cin, effect_desc);
 
 			Effect made_effect;
-			made_effect.name = effect_name;
-			made_effect.description = effect_desc;
+			made_effect.SetName(effect_name);
+			made_effect.SetDescription(effect_desc);
 			std::cout << "Effect created!\nNow choose what entity you want the effect to be applied to (introduce it's index number):\n";
 			std::cin >> index;
 
@@ -182,10 +184,33 @@ namespace DM_Helper {
 		}
 		case 6:
 		{
-			RollDiceMenu();
+			int nr;
+			std::string name;
+
+			std::cout << "Input effect name: \n";
+			std::getline(std::cin, name);
+
+			std::cout << "Input entity number: \n";
+			std::cin >> nr;
+
+			if (nr <= EntityManager::GetEntityVector().size())
+				EntityManager::GetSpecificEntity(nr - 1)->Remove(name);
+			
+			std::cout << "Effect removed! \n";
+
 			break;
 		}
 		case 7:
+		{
+			EntityManager::ShowEffectsForEachEntity();
+			break;
+		}
+		case 8:
+		{
+			RollDiceMenu();
+			break;
+		}
+		case 9:
 		{
 			std::cout << "Quitting...";
 			ongoing = false;

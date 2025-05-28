@@ -94,13 +94,15 @@ public:
 	void GetHealth() const;			 // getter pt HP
 	void SetHealth(int health);  // setter pt HP
 	void Apply(Effect applied_effect) override;
-	void Remove(Effect removed_effect) override;
+	void Remove(std::string effect_name) override;
 	void ShowAllEffects();
 	void CalculateSkills(EntityDetails& details);
 	void PopulateSkills(EntityDetails& details);
 	void ChangeCharacterStats();
 	void ChangeGivenProficiency(char prf_name[50]);
 	bool CheckIfStatsInInterval();
+	std::vector<Effect> ReturnEffectVector();
+	Effect GetEffectByName(std::string effect_name);
 
 	virtual int CalculateAbilityStrenghts();
 	//virtual void InputMessage();
