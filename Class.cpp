@@ -402,3 +402,10 @@ Equipment Class::GetSpecificAvailableEquipment(int contor)
 	}
 	return Equipment(); // daca nu exista elementul cu contorul dat se returneaza un default Equipment object
 }
+
+void Class::SetId()
+{
+	GameObject::m_id++; // creste contorul total al obiectelor
+	this->m_object_type = "Class"; // seteaza tipul obiectului
+	this->m_full_id = m_object_type + std::to_string(GameObject::m_id);
+}

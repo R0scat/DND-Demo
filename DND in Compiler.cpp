@@ -67,11 +67,6 @@ static void PlayerMode() {
     }
 }
 
-static void Debug()
-{
-
-}
-
 static void DungeonMasterMode()
 {
     std::vector<Entity> all_entities;
@@ -85,6 +80,12 @@ static void DungeonMasterMode()
     }
 }
 
+static void Debug()
+{
+    
+}
+
+
 int main()
 { 
     SingletonMenu& menu = SingletonMenu::GetInstance();
@@ -92,7 +93,7 @@ int main()
     // add the menu options (the "roles")
     menu.AddMenuItem(1, "Player Mode", PlayerMode);
     menu.AddMenuItem(2, "Dungeon Master Mode", DungeonMasterMode);
-    
+
     menu.ShowMenu(); // show + execute the actual menu
 
     return 0;

@@ -136,6 +136,7 @@
     <ClCompile Include="entity.cpp" />
     <ClCompile Include="entity_manager.cpp" />
     <ClCompile Include="equipment.cpp" />
+    <ClCompile Include="game_object.cpp" />
     <ClCompile Include="player_character.cpp" />
     <ClCompile Include="race.cpp" />
     <ClCompile Include="singleton_menu2.cpp" />
@@ -152,6 +153,7 @@
     <ClInclude Include="entity.h" />
     <ClInclude Include="entity_manager.h" />
     <ClInclude Include="equipment.h" />
+    <ClInclude Include="game_object.h" />
     <ClInclude Include="ieffect.h" />
     <ClInclude Include="player_character.h" />
     <ClInclude Include="race.h" />

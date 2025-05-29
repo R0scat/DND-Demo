@@ -6,7 +6,8 @@
 #include <string>
 #include "equipment.h" 
 #include <vector>
-#include "ability.h"   
+#include "ability.h" 
+#include "game_object.h"
 
 // lista dinamica de proficiencies (fiind mai multe si diferite in functie de clasa e mai bine decat sa aloc un anumit numar lowk random)
 // data de tip string si pointerul catre urm elem din lista
@@ -24,7 +25,8 @@ struct EquippedItem
 	EquippedItem* next;
 };
 
-class Class {
+class Class: public GameObject
+{
 protected:
 	std::string m_name;
 	std::string m_hit_dice;
@@ -53,7 +55,7 @@ public:
 	Class(std::string name, std::string hitDice, std::string description, int classLevel);
 	Class(const Class& other);											 // copy constructor
 	Class& operator=(const Class& other);                                // copy assignment operator 
-	~Class();															 // destructor
+	virtual ~Class();															 // destructor
 
 	std::string GetName() const;
 	std::string GetHitDice() const;
@@ -93,6 +95,9 @@ public:
 	static const std::vector<Equipment>& GetAvailableEquipment(); // return const reference
 	static void ShowAllAvailableEquipment();
 	static Equipment GetSpecificAvailableEquipment(int contor);
+
+	// override GameObject function (pt a seta id-ul si tipul id-ului corect)
+	void SetId() override;
 };
 
 #endif // !CLASS_H

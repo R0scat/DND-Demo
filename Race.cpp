@@ -1,25 +1,6 @@
 #include "Race.h"
-#include <string.h>
+#include <string>
 #include <iostream>
-
-Race::Race() {
-	this->m_name = "None";
-	this->m_description = "None";
-}
-
-Race::Race(std::string name, std::string description)
-{
-	this->m_name = name;
-	this->m_description = description;
-}
-
-Race::Race(const Race& RaceObj)
-{
-	this->m_name = RaceObj.m_name;
-	this->m_description = RaceObj.m_description;
-}
-
-Race:: ~Race() {}
 
 std::string Race::GetName() const
 {
@@ -51,4 +32,11 @@ std::ostream& operator << (std::ostream& cout, const Race& obj)
 {
 	cout << "	Name: " << obj.m_name << "\n	description: " << obj.m_description;
 	return cout;
+}
+
+void Race::SetId()
+{
+	GameObject::m_id++; // creste contorul total al obiectelor
+	this->m_object_type = "Race"; // seteaza tipul obiectului
+	this->m_full_id = m_object_type + std::to_string(GameObject::m_id);
 }

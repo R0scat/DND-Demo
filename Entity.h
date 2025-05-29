@@ -5,6 +5,7 @@
 #include <iostream>
 #include "ieffect.h"
 #include <vector>
+#include "game_object.h"
 
 struct Stats { // will keep the actual number like 13 st, 14 cha lalala
 	int strength;
@@ -84,7 +85,7 @@ struct EntityDetails // pun toate astea intr-un singru struct INAINTE sa le pun 
 	}
 };
 
-class Entity: public IEffect
+class Entity: public IEffect, public GameObject
 {
 public:
 	Entity();					 // constructor simplu
@@ -112,6 +113,9 @@ protected:
 	int m_health_points;
 	EntityDetails m_details;
 	std::vector<Effect> m_active_effects;
+
+	// override GameObject
+	void SetId() override;
 };
 
 #endif // !ENTITY_H

@@ -7,6 +7,7 @@
 
 class EntityManager
 {
+	// vector folosit pt a stoca toate entitatile create de DM
 	static std::vector<Entity*> m_all_entities;
 
 public:

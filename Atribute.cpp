@@ -2,6 +2,9 @@
 #include <iostream>
 //#include <fstream>
 
+// majoritatea functiilor de aici sunt simple si doar ajutatoare (gen returneaza valoarea unui membru sau functie pt constructori)
+// singura chiar relevanta este SetId care e functia overriden din clasa abstracta GameObject
+
 Atribute::Atribute() 
 {
 	this->m_type = "None";
@@ -26,8 +29,6 @@ Atribute::Atribute(const Atribute& atrbuteObject)
 	this->m_description = atrbuteObject.m_description;
 	//this->m_level = atrbuteObject.m_level;
 }
-
-Atribute::~Atribute() {}
 
 void Atribute::SetAtributeType(std::string type)
 {
@@ -59,3 +60,9 @@ std::string Atribute::GetAtributeDescription() const
 	return this->m_description;
 }
 
+void Atribute::SetId()
+{
+	GameObject::m_id++; // creste contorul total al obiectelor
+	this->m_object_type = "Atribute"; // seteaza tipul obiectului
+	this->m_full_id = m_object_type + std::to_string(GameObject::m_id);
+}

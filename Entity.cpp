@@ -248,3 +248,10 @@ bool Entity::CheckIfStatsInInterval()
 		return false;
 	return true;
 }
+
+void Entity::SetId()
+{
+	GameObject::m_id++; // creste contorul total al obiectelor
+	this->m_object_type = "Entity"; // seteaza tipul obiectului
+	this->m_full_id = m_object_type + std::to_string(GameObject::m_id);
+}
