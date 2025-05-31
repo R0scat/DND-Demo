@@ -1,4 +1,4 @@
-# DND in Compiler
+# Dungeons and Dragons manager
 
 A C++14 console application for creating and managing Dungeons & Dragons (D&D) characters and campaigns. The project provides both a Player Mode for character creation and management, and a Dungeon Master Mode for campaign and entity management.
 
