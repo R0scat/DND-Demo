@@ -62,12 +62,8 @@ A C++14 console application for creating and managing Dungeons & Dragons (D&D) c
 - Add new effects in `effect.h/cpp`.
 - Expand menu options in `main_menu.h/cpp` and related helpers.
 
-## License
-
-This project is provided for educational purposes. See individual file headers for author information.
 
 ## Authors
 
-- Main contributors: [Your Name Here]
-- See file headers for additional contributors.
+- Main contributors: R0scat
 
